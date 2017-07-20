@@ -1,6 +1,18 @@
 $(function (argument) {
 
-	//application   导航菜单
+$('.li_inp_WJ').click(function () {
+    $('.all_inp_li').text($(this).text())
+
+})
+
+
+    $('.li_all_li_inp').click(function () {
+        $('#li_but_all').text($(this).text())
+
+    })
+
+
+    //application   导航菜单
 // $('.menu').mouseover(function (argument) {
 //        $(this).css({   'color':'#F39800',
 //                        'background-color':'#F8F8F8'})
@@ -582,7 +594,6 @@ $('#l_xq_middle_button_mid_ul_li_id_8').click(function (argument) {
                 $('.qyxq_menu_display_8').css('display','block')
                     $('.qyxq_menu_display_1,.qyxq_menu_display_3,.qyxq_menu_display_2,.qyxq_menu_display_4,.qyxq_menu_display_5,.qyxq_menu_display_6,.qyxq_menu_display_7').css('display','none')
 })
-
 
 
 

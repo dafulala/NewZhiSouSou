@@ -14,3 +14,13 @@ Rails.application.config.assets.precompile += %w( javascript.js )
 Rails.application.config.assets.precompile += %w( echarts.common.min.js )
 Rails.application.config.assets.precompile += %w( nav.js )
 
+
+
+
+
+
+
+
+
+
+Rails.application.config.assets.precompile += %w(zbootstrap-datepicker.js)

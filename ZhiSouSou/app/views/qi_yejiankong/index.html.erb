@@ -1,4 +1,4 @@
-   <div class="middles" style="background: #fff; height: 151px; position: relative;top: 60px;"  >
+<div class="middles" style="background: #fff; height: 151px; position: relative;top: 60px;"  >
    	<div class="middles-left">
    		<div class="middles_left_top"><span>排序:</span>
    			<input class="btn btn-default l_inp_sort " type="button" value="消息更新时间" name="" style="background: #0C93E9; color: #fff;">
@@ -21,10 +21,16 @@
    		<div class="middles_right">
    			<div class="middles_right_top">
    			<form>
-   			<section>
-   				<option value="全部 "> </option>
-   				<option value="关注"> </option>
-   				</section>
+          <div class="btn-group" style="position:relative; top: 35px; left: -70px;">
+            <button type="button" id="li_but_all" class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown">
+              全部 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+             <li id="all_li_inp" class="li_all_li_inp" >全部</li>
+              <li id="all_li_inp"  class="li_all_li_inp">关注</li>
+            </ul>
+          </div>
    			</form>
    			<input class="form-control  l_inp_namea" type="text" value="请输入企业名称" id="l_inp_name_id" name=""  >
    			<i  class="glyphicon glyphicon-search l_sousuo"> </i><input class=" btn btn-primary l_inp_name"  style="z-index:- 1; background-image: url(../IMAGE/sousuo.png); background-repeat: no-repeat; background-position: 5px;padding-left:27px;  background-color: #24AAFF;   border: 1px solid  #DDDDDD;"  type="button" value="搜索企业" name="" >
@@ -95,3 +101,4 @@
 <%= render 'layouts/footer'%>
 
 </div>
+
