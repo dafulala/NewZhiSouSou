@@ -1,0 +1,97 @@
+   <div class="middles" style="background: #fff; height: 151px; position: relative;top: 60px;"  >
+   	<div class="middles-left">
+   		<div class="middles_left_top"><span>排序:</span>
+   			<input class="btn btn-default l_inp_sort " type="button" value="消息更新时间" name="" style="background: #0C93E9; color: #fff;">
+   			<input class="btn btn-default l_inp_sort" type="button" value="监控时间" name="">
+   		</div>
+
+
+
+
+   		<div class="middles_left_buttom"><span>排序:</span>
+   			<input class="btn btn-default l_inp_sort" type="button" value="全部 616" name="" style="background: #0C93E9;color: #fff; " >
+   			<input class="btn btn-default l_inp_sort" type="button" value="采集中  2" name="">
+   			<input class="btn btn-default l_inp_sort" type="button" value="监控中  600" name="">
+   			<input class="btn btn-default l_inp_sort" type="button" value="已取消  11" name="">
+   			<input class="btn btn-default l_inp_sort" type="button" value="采集失败  3" name="">
+   		
+   		</div>
+
+   	</div>
+   		<div class="middles_right">
+   			<div class="middles_right_top">
+   			<form>
+   			<section>
+   				<option value="全部 "> </option>
+   				<option value="关注"> </option>
+   				</section>
+   			</form>
+   			<input class="form-control  l_inp_namea" type="text" value="请输入企业名称" id="l_inp_name_id" name=""  >
+   			<i  class="glyphicon glyphicon-search l_sousuo"> </i><input class=" btn btn-primary l_inp_name"  style="z-index:- 1; background-image: url(../IMAGE/sousuo.png); background-repeat: no-repeat; background-position: 5px;padding-left:27px;  background-color: #24AAFF;   border: 1px solid  #DDDDDD;"  type="button" value="搜索企业" name="" >
+   		
+   		</div>
+
+
+
+   		<div class="middles_right_buttom">
+   			
+   			<i  class="glyphicon glyphicon-new-window l_sousuos"> </i><input type="button" style=" z-index: -1;" data-toggle="modal" data-target="#myModal3" value="导出法律诉讼" name="" class="btn btn-warning l_out_put">
+   			<input class="btn btn-warning l_out_put" style="z-index: -1;  background-image: url(../IMAGE/piliang.png) ; background-repeat: no-repeat; background-position: 0px; padding-left: 25px;" type="button" value="批量导出" name="">
+   		
+   		</div>
+<!-- 导出法律诉讼模态框++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"  style="width: 500px;">
+    <div class="modal-content" style="width: 500px; height: 184px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          导出法律诉讼
+        </h4>
+      </div>
+
+      <form role="form" style="margin-top: 20px;">
+     
+  <button type="button" class="btn btn-primary li_daochubaogao" style="margin-left: 80px;">
+          导出报告
+        </button>
+
+    <input type="text" class="form-control li_daochubaogao" style="width: 121px;" id="name" 
+         placeholder="选择开始日期"><input type="text" class="form-control li_daochubaogao"  style="width: 121px;"  id="name" 
+         placeholder="选择结束日期">
+</form>
+    
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   		</div>
+   </div>
+
+
+<div class="qiyejiankong_footer">
+
+<%= render 'layouts/qiyejiankong-table'%>
+<%= render 'layouts/footer'%>
+
+</div>

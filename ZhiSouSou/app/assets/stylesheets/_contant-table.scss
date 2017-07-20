@@ -1,0 +1,30 @@
+// Place all the styles related to the she_baojiankong controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+body{background:#f0f0f0;}
+.y-contant{width:100%;font-size:14px;font-family:inherit;margin-bottom:60px; }
+
+
+.y-contant_one{margin-top:0px;}
+.y-form,.y-form_li{width:95%;background-color:#fff;text-align:center;border:3px;margin:0 auto;border-color:rgb(225,225,225);}
+.y-form-head{height:30px;background:rgb(248,248,248);color:rgb(152,152,152);}
+.y-form_li{
+	margin-top: 15px;
+	width:82%;
+	border-radius: 0;
+	border: 1px solid #F1F1F1 ;
+}
+.y-contant{width:100%;font-size:14px;}
+
+
+.y-form{width:97%;background-color:#fff;text-align:center;border:3px;margin:0 auto;border-color:rgb(225,225,225);
+
+}
+.y-form-head{height:40px;background:rgb(248,248,248);color:rgb(152,152,152);}
+
+th{text-align: center;font-family: "苹方-简";border:1px solid rgb(236,236,236);}
+td{text-align: center;font-family: "苹方-简";border:1px solid rgb(225,236,236);height:35px;background:rgb(255,255,255);}

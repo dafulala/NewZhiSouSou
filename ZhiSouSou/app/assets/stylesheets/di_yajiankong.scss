@@ -1,0 +1,103 @@
+// Place all the styles related to the DiYajiankong controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the DiYajiankong controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Place all the styles related to the DiYajiankong controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.c_content{
+  height: 275px;
+}
+.c_sx{
+  margin-top: 10px;
+  margin-left: 45px;
+  float: left;
+  span{
+    color: #888;
+  }
+}
+.c_center{
+  margin-top: 20px;
+
+  font-size: 14px;
+  a{
+    margin-left: 5px;
+    color: #666;
+
+  }
+  div{
+    margin-left: 5px;
+    color: #666;
+  }
+  span{
+    color: #999;
+  }
+}
+.c_center div{
+  padding-left: 10px;
+}
+#c_1,#c_2,#c_3,#c_4,#c_5,#c_6,#c_7,#c_8,#c_9,#c_10,#c_11{
+  border: 1px solid #ddd;
+  &:hover{
+    border: 1px solid #0C93E9;
+  }
+}
+
+
+//更新时间
+.c_ss{
+  float: right;
+}
+.c_update{
+  margin-top: 110px;
+  position: absolute;
+  right:30px;
+  color: #888;
+}
+#c_input_input{
+  width: 230px;
+  margin-right: 370px;
+}
+
+#c_ss_ss{
+  margin-right: 10px;
+  background-color: #24aaff;
+  border:1px solid #24aaff;
+  &:hover{
+    background-color: #0c93e3;
+    color: #fff;
+  }
+}
+.c_input{
+  margin-top: 138px;
+  color: #fff;
+  position: absolute;
+  right:30px;
+  font-size: 14px;
+}
+.c_input a{
+  color: #fff;
+  background-color: #f39800;
+  margin-top: -60px;
+  border:1px solid #f39800;
+}
+.c_input_a{
+  position: absolute;
+  right:0px;
+
+}
+#c_chaxun,#c_daoru,#c_daochu{
+  &:hover{
+    color: #fff;
+    background-color:rgb(212,133,0);
+    border:1px solid rgb(212,133,0);
+  }
+}
+

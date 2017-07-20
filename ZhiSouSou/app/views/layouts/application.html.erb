@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZhiSouSou</title>
+    <%= csrf_meta_tags %>
+
+    <script type="text/javascript" src="http://www.juheweb.com/demo/js/jquery.min.js"></script>
+
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'javascript', media: 'all', 'data-turbolinks-track': 'reload'  %>
+<div data-role="page" id="myPage" data-dom-cache="true">
+
+  </head>
+
+  <body>
+
+
+
+
+<div class="l_head col-lg-12">
+	<ul  >
+              <a class="l_head_menu  logo" style="background-image: url(<%= image_path("index.png")  %>);"> </a>
+
+
+	        <a  class="l_head_menu menu" href="<%= qi_yejiankong_index_path %>" style="background-color: #F8F8F8; color: #F39800;"> <i class="glyphicon glyphicon-list-alt" id=""> </i>&nbsp;&nbsp;企业监控</a>
+		<a  class="l_head_menu menu" href="<%= jian_kongdongtai_index_path %>"><i class=" 	glyphicon glyphicon-lock" id=""> </i> &nbsp;&nbsp;监控动态</a>
+		<a  class="l_head_menu menu" href="<%= di_yajiankong_index_path %>"> <i class=" 	glyphicon glyphicon-envelope" id=""> </i>&nbsp;&nbsp;抵押监控</a>
+		<a  class="l_head_menu menu"  href="<%= she_baojiankong_index_path %>"> <i class=" 	glyphicon glyphicon-user" id=""> </i>&nbsp;&nbsp;社保监控</a>
+
+
+
+
+		<a  class="l_head_menu menu" > <i class="glyphicon glyphicon-cog" id=""> </i>&nbsp;&nbsp;系统设置</a>
+	</ul>
+
+                     <div class="l_head_right">
+                     
+                       <img  class="l_head_right_img" src=<%= image_path("headpic.jpg")  %> >
+                       <span class="l_khzh">客户账号</span><br>
+                               <span class="l_khzw">客户职务</span>
+                               <i class="glyphicon glyphicon-chevron-down" id="l_head_down" style="width: 0px;"> </i>
+
+      <div class="header_right_display" >
+      	<img class="header_right_display_img" style=" height: 170px;width:170px; margin-left: 0px;"  src=<%= image_path("tow.jpeg") %>>
+      	<ul class="header_right_display_lis"  style="margin-top:17px; ">
+      	<span class=" l_grzl_span "   data-toggle="modal" data-target="#myModal">个人资料</span>
+ 		<span class="l_grzl_span"  data-toggle="modal" data-target="#myModal2">修改密码</span>
+      		<span class="l_grzl_span">操作手册</span>
+      		<span class="l_grzl_span">推出</span>
+      	</ul>
+      </div>
+
+
+
+                     </div>
+</div>
+    <%= yield %>
+
+<!--     //+++++++++++++++++++++++++++++++++++++++ -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"  style="width: 1000px;">
+    <div class="modal-content" style="width: 1000px; height: 348px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          修改密码
+        </h4>
+      </div>
+
+      <form role="form" style="margin-top: 20px;">
+  <div class="form-group" style="width: 87%; margin: 0 auto;">
+    <label for="name" id="name_li">原始密码:</label>
+    <input type="text" class="form-control" id="name" 
+         placeholder="">
+  </div>
+    <div class="form-group" style="width: 87%; margin: 0 auto;">
+    <label for="name" id="name_li">新密码:</label>
+    <input type="text" class="form-control" id="name" 
+         placeholder="">
+  </div>
+  <div class="form-group" style="width: 87%; margin: 0 auto;">
+    <label for="name" id="name_li">确认密码:</label>
+    <input type="text" class="form-control" id="name" 
+         placeholder="">
+  </div>
+
+</form>
+  
+  
+     
+        <button type="button" class="btn btn-primary" style="margin-left: 480px; margin-top: 20px;">
+          保存
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+<!-- +++++++++++++++++++++++++++++++++++ -->
+
+<!-- +++++++++++++++++++++++++++++++++++ -->
+
+<!-- +++++++++++++++++++++++++++++++++++ -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"  style="width: 1000px;">
+    <div class="modal-content" style="width: 1000px; height: 348px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          修改密码
+        </h4>
+      </div>
+
+      <form role="form" style="margin-top: 20px;">
+  <div class="form-group" style="width: 87%; margin: 0 auto;">
+    <label for="name" id="name_li">用户名:</label>
+    <input type="text" class="form-control" id="name" 
+         placeholder="">
+  </div>
+    <div class="form-group" style="width: 87%; margin: 0 auto;">
+    <label for="name" id="name_li">邮箱:</label>
+    <input type="text" class="form-control" id="name" 
+         placeholder="">
+  </div>
+  <div class="form-group" style="width: 87%; margin: 0 auto;">
+    <label for="name" id="name_li">联系方式:</label>
+    <input type="text" class="form-control" id="name" 
+         placeholder="">
+  </div>
+
+</form>
+  
+  
+     
+        <button type="button" class="btn btn-primary" style="margin-left: 480px; margin-top: 20px;">
+          保存
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+  </body>
+</html>

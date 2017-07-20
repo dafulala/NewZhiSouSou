@@ -1,0 +1,55 @@
+// Place all the styles related to the she_baojiankong controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+
+body{
+	background: #F0F0F0;
+}
+
+
+.y-shebao{padding: 25px;width:100%;background:#fff;}
+.y-menu_one{  padding-top:0px;font-size:14px;line-height: 34px;}
+.y-jslx{margin-top:10px;}
+.y-menu_one_title{float: left;padding-top:5px;color:rgb(154,154,154); }
+.j3,.j2{border-radius:0.3em;}
+.l_inp_sort{
+	color: #797979;
+}
+
+.y-menu_one_left{float:left;float:right;font-size: 14px;padding-top:15px;}
+.y-menu_one_left_option{float:left; margin-right: 5px;}
+.y-menu-text{height:36px;width:300px;color:#555;border-radius: 4px;}
+.y-menu-search{display:block;border-radius:0.3em;background:rgb(36,170,255);color:rgb(255,255,255);margin-right:10px;padding: 5px 12px;text-decoration:none;}
+.y-menu-xz{display:block;border-radius:0.3em;background:rgb(243,152,0);color:rgb(255,255,255);margin-right:10px;padding: 5px 12px;text-decoration:none;}
+.y-menu-search:hover,.menu-search:focus{background:rgb(12,147,233);color:rgb(255,255,255);text-decoration:none;}
+.y-menu-xz:hover,.menu-xz:focus{background:rgb(212,133,0);color:rgb(255,255,255);text-decoration:none;}
+
+
+.shebao{padding: 25px;width:100%;background:#fff;}
+.menu_one{height:34px;padding-top:0px;font-size:14px;line-height: 34px;}
+.jslx{margin-top:40px;}
+.menu_one_title{float: left;padding-top:5px;color:rgb(154,154,154); }
+.menu_one_option{display:block;border-radius:0.3em;border:1px solid #ddd;float: left;margin-left: 10px;text-align: center;padding:4px;color:#5c5c5c;text-decoration:none;}
+.menu_one_option:hover,.menu_one_option:focus{background:#0c93e9;color:#fff;text-decoration:none;}
+
+.menu_one_left{float:left;float:right;font-size: 14px;padding-top:15px;}
+.menu_one_left_option{float:left;}
+.menu-text{height:36px;margin-right:10px;color:#555;border-radius: 4px;border:1px solid #ccc;}
+.menu-search{display:block;border-radius:0.3em;background:rgb(36,170,255);color:rgb(255,255,255);margin-right:10px;padding: 5px 12px;text-decoration:none;}
+.menu-xz{display:block;border-radius:0.3em;background:rgb(243,152,0);color:rgb(255,255,255);margin-right:10px;padding: 5px 12px;text-decoration:none;}
+.menu-search:hover,.menu-search:focus{background:rgb(12,147,233);color:rgb(255,255,255);text-decoration:none;}
+.menu-xz:hover,.menu-xz:focus{background:rgb(212,133,0);color:rgb(255,255,255);text-decoration:none;}
+
+
+
+
+.NewSearch-body{text-align: center;}
+.NewSearch-body p{color: red;}
+.NewSearch-body-text{display:block;width: 80%;border-radius:3px;border:1px solid #ccc;height:34px;padding:6px 12px;margin:10px 10%;}

@@ -1,0 +1,2 @@
+module DiYajiankongHelper
+end

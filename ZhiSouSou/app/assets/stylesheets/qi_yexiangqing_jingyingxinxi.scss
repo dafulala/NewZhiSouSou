@@ -1,0 +1,113 @@
+// Place all the styles related to the QiYexiangqing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Place all the styles related to the QiYexiangqing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//经营信息
+.c_jyxx_all{
+  width: 98%;
+  margin-top: 100px;
+  border: 1px solid #e4e4e4;
+margin: 0 auto;
+  box-shadow:0 0 3px #ccc;
+  background-color: #fff;
+}
+.c_jyxx_header{
+  border-bottom: 1px solid #ddd;
+  height: 102px;
+}
+.c_jyxx_header a{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  float: left;
+  font-size: 14px;
+  margin-right: 28px;
+  padding: 0 10px 0 10px;
+  background-color: #fcfcfc;
+  line-height: 24px;
+  color: #337ab7;
+  margin-top: 37px;
+  &:hover{
+    background-color: #0C93E9;
+    border: 1px solid #0C93E9;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+.c_first{
+  margin-left: 43px;
+}
+
+.c_jyxx_center{
+  width: 93.5%;
+  margin: 0 auto;
+}
+.c_tb_all{
+  margin-top: 30px;
+}
+.c_jyxx_center table th{
+  background-color: #f1f1f1;
+  color: #999;
+  font-weight: normal;
+}
+.c_jyxx_center h2{
+  display: block;
+  margin-top:50px;
+}
+#c_first_bt{
+  display: block;
+  margin-top: 20px;
+}
+.c_tbody_tr td:hover{
+  display: block;
+  background-color: #F39800;
+}
+.c_text_left{
+  text-align: left;
+}
+
+.c_tb_all ul{
+  display: inline-block;
+  padding:0px;
+  margin: 0;
+  li{
+    display: inline;
+    a{
+      color: #111;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color.3s;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    a.active{
+      background-color: #0C93E9;
+      color: #fff;
+      border: 1px solid #0C93E9;
+    }
+  }
+}
+.c_tb_all ul li a:hover:not(.active){
+  background-color: #ddd
+}
+.c_tb_all ul li:first-child a{
+  border-top-left-radius:5px;
+  border-bottom-left-radius: 5px;
+}
+.c_tb_all ul li:last-child a{
+  border-top-right-radius:5px;
+  border-bottom-right-radius: 5px;
+}
+.c_tb_all ul{
+  position: absolute;
+  right:70px;
+}
+
+

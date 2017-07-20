@@ -1,0 +1,173 @@
+<label></label>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>登录-企业风险监控平台</title>
+  <%= csrf_meta_tags %>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/mycss.css">
+
+  <!-- 可选的Bootstrap主题文件（一般不使用） -->
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'javascript', media: 'all', 'data-turbolinks-track': 'reload'  %>
+
+</head>
+
+<body class="login">
+<div class="s_div">
+
+<!-- 头部结构 -->
+<div class="nav">
+  <div class="nav-left">
+    <div class="logo_s"><img src=<%= image_path ('logo_nav.png') %>></div>
+    <div class="nav-text">智搜搜企业风险监控平台</div>
+  </div>
+  <div class="nav-right">
+    <button class="btn btn-warning" style="background-color:#fe7048; border: none; width: 140px; " type="button" >免费试用</button>
+  </div>
+</div>
+
+
+
+<!-- 这是中间内容部分 -->
+<div class="content">
+  <div class="content-top-bk" style="background-position: 50% top; background-repeat: no-repeat; background-image: url(<%=  image_path ('banner.jpg') %>)">
+    <!-- 这是内容的左边 -->
+    <div class="content-top">
+      <div class="content-top-left">
+        <p class="h1">企业风险全息画像</p>
+        <p class="h3">实时监控平台EIDP</br>是奇点创智公司的旗舰产品</p>
+      </div>
+
+      <!-- 这是内容的右边 -->
+      <div class="content-top-right" >
+
+        <div class="panel panel-default" style="border-radius: 0.5em;">
+          <div class="panel-heading">
+            <p class="panel-title"> 账号登陆</p>
+
+
+            <from class="bs-example bs-example-form" role="from">
+              <!-- 分隔符 -->
+              <div class="input-group input-group-lg">
+                <input type="text" class="form-control" style="border-radius: 0.5em;" placeholder="用户名">
+
+              </div>
+
+              <div class="input-group input-group-lg">
+                <input type="text" class="form-control" style="border-radius: 0.5em;" placeholder="密码">
+              </div>
+              <!-- 分隔符 -->
+
+
+
+
+              <button type="button" class="btn btn-lg land" style="color: #fff;">登录</button>
+
+
+
+
+
+              <div class="form-group">
+
+                <div class="checkbox"><label class="LA"><input type="checkbox"> <p>记住密码？</p></label></div>
+
+
+              </div>
+              <!-- 分隔符 -->
+
+              <!-- 分隔符 -->
+
+            </from>
+          </div>
+
+        </div>
+
+
+      </div><!-- top-right的结束标签 -->
+    </div>
+  </div>
+
+
+  <!--       内容的下边 -->
+
+
+
+
+
+
+</div>
+
+<div class="content-under">
+  <div class="box">
+
+    <p class="h2">  8000万+企业 <br> 随时查询 </p>
+
+
+    <p class="box-under">在7500万工商数据、2000万诉讼数据、全网新闻报道内容、几十亿的微博、微信公众号数据对贷款用户图谱、多维度的信息全部都分析，务求不放过贷款用户任何蛛丝马迹。</p>
+
+
+
+  </div>
+
+
+  <div class="box">
+
+    <p class="h2">  多维度信息 <br> 多类信息齐全 </p>
+
+    <p class="box-under" >包含目标企业及其相关企业的诉讼情况，包括法律公告、裁判文书、被执行人、失信人信息等.....</p>
+
+
+
+  </div>
+
+
+  <div class="box">
+
+    <p class="h2">  全网数据采集 <br> 大数据技术 </p>
+
+
+    <p class="box-under">510家具有新闻报道权的媒体，300多个大型新闻门户网站，1200多家论坛，3000多个各级行政部门，行业网站，微博、微信等自媒体平台，20多个大型新闻APP。</p>
+
+
+
+  </div>
+
+
+  <div class="last-box">
+
+    <p class="h2">  风险分析 <br> 预警及监控模型 </p>
+
+
+    <p class="box-under">是否为失信被执行人 / 是否经营异常 / 裁判文书涉案金额高达注册资本的百分比 / 被执行标的总和占注册资本的百分比等等.......</p>
+
+
+
+  </div>
+
+
+</div>
+
+<div class="foot">
+  <p class="foot-text">湖南奇点创智数据科技有限公司 版权所有©2014 - 2017</p>
+</div>
+</div>
+</body>
+</html>
+
+

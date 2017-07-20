@@ -1,0 +1,2 @@
+module JianKongdongtaiHelper
+end

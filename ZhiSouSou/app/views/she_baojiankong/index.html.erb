@@ -1,0 +1,56 @@
+
+<div class="y-shebao">
+
+<div class="y-menu_one_left">
+		<input type="text" name=""  style="height: 33px;" class="y-menu_one_left_option form-control y-menu-text" placeholder="公司名称／社保编号">
+		<a href="#" class="y-menu_one_left_option y-menu-search btn btn-warning"><span class="glyphicon glyphicon-search"></span>&nbsp搜索</a>
+		<a href="#" class="y-menu_one_left_option y-menu-xz btn btn-warning" data-toggle="modal" data-target="#NewSearch">新增查询</a>
+
+				<div class="modal fade" id="NewSearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				    <div class="modal-dialog">
+				        <div class="modal-content">
+				            <div class="modal-header NewSearch-header">
+				                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				                <h4 class="modal-title" id="myModalLabel">新增查询</h4>
+				            </div>
+				            <div class="modal-body NewSearch-body">
+				            	<input type="text" name="" placeholder="请输入公司名称" class="NewSearch-body-text">
+				            	<p>*目前仅支持深圳企业的社保监控</p>
+				            </div>
+				            <div class="modal-footer"> 
+				                <button type="button" class="btn btn-primary">取消</button>
+				                <button type="button" class="btn btn-default" data-dismiss="modal">提交</button>
+				            </div>
+				        </div><!-- /.modal-content -->
+				    </div><!-- /.modal -->
+				</div>
+
+		<a href="#" class="y-menu_one_left_option y-menu-xz btn btn-warning"><span class="glyphicon glyphicon-new-window"></span>&nbsp导出全部</a>
+</div>
+<div class="y-menu_one" id="y-menu2"  style="margin-top: 60px; color:#666666 ; ">
+	<div class="y-menu_one_title">企业类型：</div>
+	
+   			<input class="btn btn-default l_inp_sort" type="button" value="全部 (280)" name="">
+   			<input class="btn btn-default l_inp_sort" type="button" value="警示 (280)" name="">
+</div>
+
+<div class="y-menu_one y-jslx" >
+<div class="y-menu_one_title">警示类型：</div>
+<input class="btn btn-default l_inp_sort" type="button" value="全部  (616)" name="" style="background: #0C93E9;color: #fff; " >
+   			<input class="btn btn-default l_inp_sort" type="button" value=" 参保人数为零" name="">
+   			<input class="btn btn-default l_inp_sort" type="button" value="当前月比上个月下降超过20%" name="">
+   			<input class="btn btn-default l_inp_sort" type="button" value="近两个月联系下降超过10%" name="">
+   			
+	
+	<!-- <a href="#" class="btn btn-default  y_btn_inp j3">全部</a>
+	<a href="#" class="btn btn-default  y_btn_inp j3">参保人数为零</a>
+	<a href="#" class="btn btn-default  y_btn_inp j3">当前月比上个月下降超过20%</a>
+	<a href="#" class="btn btn-default  y_btn_inp j3">近两个月联系下降超过10%</a> -->
+</div>
+</div>
+
+<%= render 'layouts/shebaojiankong-table'%>
+<%= render 'layouts/footer'%>
+
+
+

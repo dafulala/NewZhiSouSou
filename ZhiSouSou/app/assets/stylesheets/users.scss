@@ -1,0 +1,207 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.s_div{
+   background-color: #fff;
+  font:14px/1.5 "Open Sans",PingFang,"PingFang SC","PingFang HK",
+  "PingFang TC","Microsoft YaHei","Microsoft JhengHei",
+  "Helvetica Neue",Arial,sans-serif;
+  color: #444;
+  word-break: break-all;
+  padding: 0;
+  margin:0;
+  position: relative;
+  margin-top: -5px;
+}
+
+
+
+.login{
+
+
+  color: #fff;
+}
+.nav{
+  margin:0 auto;
+  width: 1190px;
+  height: 55px;
+  line-height: 55px;
+
+  /* overflow: hidden; */
+}
+.nav:after {
+  display: table;
+  content: " ";
+}
+.nav:after {
+  clear: both;
+}
+.nav-left{
+  float: left;
+}
+.logo_s{
+  display:inline-block;
+  margin:14px 160px 14px 0px;
+}
+
+.nav-text{
+  float: right;
+  font-size: 22px;
+  height: 60px;
+  line-height: 60px;
+  margin-left:-140px; ;
+
+}
+
+.nav-right{
+  float: right;
+  height: 55px;
+  line-height: 55px;
+  margin-top: 10px;
+}
+
+/*.btn-default{
+  background-color: #fe7048;
+  color:#fff;
+  width: 140px;
+}*/
+
+
+//
+//.btn-default:hover{
+//  background: #fe7048    ;
+//  color: #fff;
+//}
+//
+//.btn-default:visited{
+//  background: #fe7048    ;
+//  color: #fff;
+//}
+
+
+
+
+.content{
+  background: #000;
+}
+.content-top-bk{
+  margin: 0 auto;
+
+
+
+}
+
+.content-top{
+  clear: both;
+  width: 1190px;
+  overflow: hidden;
+  height: 534px;
+    margin:0 auto;
+}
+.content-top-left{
+  margin-top:110px;
+  margin-left:50px;
+  width: 500px;
+
+
+}
+
+.h1{
+  font-size: 50px;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+.h3{
+  font-size: 27px;
+  color: #fff;
+  line-height: 1.4em;
+  font-weight: 100
+
+}
+
+.content-top-right{
+  float: right;
+  margin-top:-180px;
+  width: 340px;
+  height: 360px;
+
+}
+.panel-default{
+
+  width: 340px;
+  height: 360px;
+
+}
+.panel-title{
+  height: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600
+
+}
+.panel-heading{
+  height: 360px;
+}
+.input-group-lg{
+  width: 310px;
+  /* margin:x; */
+  margin: 20px 0px;
+}
+.land{
+  width: 310px;
+  float: left;
+  height: 40px;
+  font-size: 16px;
+  background: #fe7048;
+
+}
+.LA{
+  float: left;
+  margin: 20px 0px;
+
+}
+
+
+
+.content-under{
+
+  width: 1190px;
+  height: 470px;
+
+  margin: 0 auto;
+  padding-top:  80PX;
+}
+
+.box{
+  float: left;
+  margin-right:65px;
+  width: 245px;
+}
+
+
+.box-under{
+  word-wrap:break-word;
+  color:#ccc;
+  font-size: 16px;
+}
+
+.last-box{
+
+  float: right;
+  word-wrap:break-word;
+  margin-right:0px;
+  width: 245px;
+}
+
+.foot-text{
+
+  height: 60px;
+  text-align: center;
+  color:#ccc;
+  font-size: 20px;
+
+}
