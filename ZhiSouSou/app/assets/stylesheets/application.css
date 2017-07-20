@@ -19,4 +19,5 @@
 @import "_footer";
 
  @import "bootstrap-sprockets";
-
+ @import "bootstrap"
+ @import "font-awesome"
