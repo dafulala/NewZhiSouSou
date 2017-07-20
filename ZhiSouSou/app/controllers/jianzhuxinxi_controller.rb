@@ -1,0 +1,2 @@
+class JianzhuxinxiController < ApplicationController
+end

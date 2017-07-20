@@ -146,6 +146,11 @@
   </div><!-- /.modal -->
 </div>
 
+    <%unless flash[:notice].blank? %>
+      <div><%= flash[:notice]%></div>
+     <% end %>
+    <%= yield %>  
+
 
 
   </body>
