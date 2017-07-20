@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+   layout :false
   def new
 
   end
@@ -14,10 +14,12 @@ class SessionsController < ApplicationController
     end
   end
 
+
+
   def destroy
     logout
     flash[:notice] = "退出成功"
-    redirect_to root_path
+    redirect_to new_session_path
   end
 
 end
