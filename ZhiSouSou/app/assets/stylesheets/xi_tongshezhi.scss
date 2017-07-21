@@ -2,9 +2,7 @@
     background-color : #f0f0f0 ; 
     font-size : 14px ;
 }
-div{
-    display : block ;
-}
+
 .q_divOut{
     padding : 38px ;
 }
@@ -33,7 +31,7 @@ div{
     color : #fff ;
 }
 .q_divRight{
-    overflow : hidden;
+  
 }
 .q_form{
     display: block;
@@ -41,7 +39,7 @@ div{
 }
 .q_jkszR{
     padding : 23px 20px  57px 0px; 
-    border-bottom : 1px solid #ddd;
+    border-bottom : 1px solid #EEEEEE;
     font-size : 16px;
 }
 .q_setjklx{
@@ -95,4 +93,9 @@ p {
     line-height : 60px;
     color:#808080;
     clear : both ;
+}
+
+.xq_inp_cun{
+    margin-top:-450px;
+  margin-left: 250px;
 }
