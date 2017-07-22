@@ -109,6 +109,51 @@ $('.c_sx_jq ').mouseover(function (argument) {
        $(this).css({'background-color':'#fff','color':'#666666'})
 })})
 
+
+
+//抵押监控模态框
+$('#inp_c_1').click(function (argument) {
+            $('.c_qh_gb1').css('display','block')
+            $('.c_qh_gb2,.c_qh_gb3').css('display','none')
+})
+$('#inp_c_2').click(function (argument) {
+            $('.c_qh_gb2').css('display','block')
+            $('.c_qh_gb1,.c_qh_gb3').css('display','none')
+})
+$('#inp_c_3').click(function (argument) {
+            $('.c_qh_gb3').css('display','block')
+            $('.c_qh_gb1,.c_qh_gb2').css('display','none')
+})
+
+$('#inpt_c_1').click(function (argument) {
+            $('.c_qha_gb1').css('display','block')
+            $('.c_qha_gb2').css('display','none')
+})
+$('#inpt_c_2').click(function (argument) {
+            $('.c_qha_gb2').css('display','block')
+            $('.c_qha_gb1').css('display','none')
+})
+
+$('.c_click_down ').mouseover(function (argument) {
+       $(this).css({'background-color':'#0C93E9','color':'#fff','border ':'1px solid #0c93e9'})
+})          .mouseout(function (argument) {
+       $(this).css({'background-color':'#fff','color':'#666'})
+})          .click(function (argument) {
+        $(this).css({'background-color':'#0C93E9','color':'#fff'})
+     .off('mouseover mouseout').siblings('button').css({'background-color': '#fff',"color": '#666666'})
+            .mouseover(function (argument) {
+       $(this).css({'background-color':'#0C93E9','color':'#fff'})
+})          .mouseout(function (argument) {
+       $(this).css({'background-color':'#fff','color':'#666'})
+})})
+
+
+
+
+
+
+
+
 //企业详情页风险概述
 
 $('.l_xq_middle_button_mid_ul_li').mouseover(function (argument) {
