@@ -31,9 +31,9 @@
       <input id="c_input_input" class="form-control" type="text" placeholder="客户/权利人/产权证号/身份证号">
       <div class="c_input_a">
         <a href="" class="btn btn-default glyphicon glyphicon-search" id="c_ss_ss">搜索</a>
-        <a href="" class="btn btn-default" id="c_chaxun">新增查询</a>
-        <a href="" class="btn btn-default glyphicon glyphicon-share" id="c_daoru"><span>批量导入</span></a>
-        <a href="" class="btn btn-default glyphicon glyphicon-share" id="c_daochu"><span>抵押导出</span></a>
+        <a href="" class="btn btn-warning"   data-toggle="modal" data-target="#c_myModal"  id="c_chaxun">新增查询</a>
+        <a href="" class="btn btn-warning glyphicon glyphicon-share"  data-toggle="modal" data-target="#c_myModal_daoru" id="c_daoru"><span>批量导入</span></a>
+        <a href="" class="btn btn-warning glyphicon glyphicon-share"  data-toggle="modal" data-target="#c_myModal_daochu"   id="c_daochu"><span>抵押导出</span></a>
       </div>
     </div>
   </div>
@@ -50,5 +50,278 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 查询模态框（Modal） -->
+<div class="modal fade c_a" id="c_myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content c_modal_width">   
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            <span>新增个人抵押</span> 
+            <span  style="color: red;font-size: 12px;margin-left: 15px">（带*号请认真填写）</span>   
+        </h4>
+      </div>          
+      <div class="modal-body">
+        <div  class="c_modal_body_header  c_qh_dibs">
+           <button   id="inp_c_1" type="button" class="btn btn-default c_click_down"  style="color: #FFF; background-color:#0c93e9">房产</button>
+           <button  id="inp_c_2" type="button" class="btn btn-default c_click_down"  style="color: #666" >不动产</button>
+          <button  id="inp_c_3" type="button" class="btn btn-default c_click_down"   style="color: #666">土地</button>
+        </div>
+
+
+
+        <div class="c_modal_body_contant  c_qh_gb1"  style="display:block;">
+            <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>产权证号：</span>
+                <input class="form-control c_modal_input" data-val="true" data-val-length="字段houseNumberbi必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入产权证号！" type="text" name="HouseNumber">
+            </div>
+             <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>权利人：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入权利人！" type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                <span>身份证号码(关联过户价)：</span>
+                <input class="form-control " data-val="true" data-val-length="字段CardNumber必须是最大长度为50的字符串。" data-val-length-max="50" data-val-required="身份证格式不正确！"  data-val-regex-pattern="(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)"  type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>客户：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入客户！" type="text" name="InfoName">
+            </div>
+            </div>
+
+         
+         <div  class="c_modal_body_contant c_qh_gb2" style="display: none;">
+            <div class="c_modal_div input-group">
+                <span  style="color: red">*</span>
+                <span>年份：</span>
+                 <div class="input-group">
+                <span class="input-group-addon">粤</span>
+                <input  id="c_chaxun_diqu"  class="form-control c_modal_input" data-val="true" data-val-length="字段houseNumberbi必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入产权证号！" type="text" name="HouseNumber">
+                </div>
+            </div>
+             <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>产权证号：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入权利人！" type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                 <span  style="color: red">*</span>
+                <span>权利人：</span>
+                <input class="form-control " data-val="true" data-val-length="字段CardNumber必须是最大长度为50的字符串。" data-val-length-max="50" data-val-required="身份证格式不正确！"  data-val-regex-pattern="(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)"  type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                <span>身份证号码(关联过户价)：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入客户！" type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>客户：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入客户！" type="text" name="InfoName">
+            </div>
+            </div>
+
+           
+            
+            <div class="c_modal_body_contant c_qh_gb3"  style="display: none">
+            <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>产权证号：</span>
+                <input class="form-control c_modal_input" data-val="true" data-val-length="字段houseNumberbi必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入产权证号！" type="text" name="HouseNumber">
+            </div>
+             <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>权利人：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入权利人！" type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                <span>身份证号码(关联过户价)：</span>
+                <input class="form-control " data-val="true" data-val-length="字段CardNumber必须是最大长度为50的字符串。" data-val-length-max="50" data-val-required="身份证格式不正确！"  data-val-regex-pattern="(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)"  type="text" name="InfoName">
+            </div>
+             <div class="c_modal_div">
+                <span  style="color: red">*</span>
+                <span>客户：</span>
+                <input class="form-control input-validation-error" data-val="true" data-val-length="字段InfoName必须是最大长度为100的字符串。" data-val-length-max="100" data-val-required="请输入客户！" type="text" name="InfoName">
+            </div>
+            </div>
+
+
+
+      </div>
+      <div class="modal-footer c_modal_footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消
+        </button>
+        <button type="button" class="btn btn-primary " id="c_modal_sumit">
+          提交
+        </button>
+      </div>
+      
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 导入模态框（Modal） -->
+<div class="modal fade" id="c_myModal_daoru" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content c_modal_width_daoru">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+         Excel批量导入个人抵押
+        </h4>
+      </div>
+      <div class="modal-body c_modal_body_daoru">
+         <div  class=" c_daoru">
+            <button   id="inp_c_1" type="button" class="btn btn-default c_click_down"  style="color: #FFF; background-color:#0c93e9">房产</button>
+           <button  id="inp_c_2" type="button" class="btn btn-default c_click_down"  style="color: #666" >不动产</button>
+          <button  id="inp_c_3" type="button" class="btn btn-default c_click_down"   style="color: #666">土地</button>
+   </div>
+         <div class="c_daoru_wj">
+                 <input class="form-control "   type="text"  id="c_daoru_wenjian">
+                 <span  id="c_daoru_wenjian_span">
+                   <i class="glyphicon glyphicon-folder-open"></i>
+                    浏览文件
+                 </span>  
+            </div>
+      </div>
+      <div class="modal-footer c_daoru_footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </button>
+        <button type="button" class="btn btn-primary " id="c_modal_sumit">
+           点我下载Excel模板格式
+        </button>
+        <button type="button" class="btn btn-primary"  id="c_modal_sumit">
+          开始导入
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+<!--导出 模态框（Modal） -->
+<div class="modal fade" id="c_myModal_daochu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+            抵押导出
+        </h4>
+      </div>
+      <div class="modal-body c_body_daochu">
+           <div class="c_modal_contant_daochu" >
+                 <div style="float: left;">
+                   <span  style=" line-height:30px;">导出数据：</span>
+                 </div>
+                  <button    id="inpt_c_1" type="button" class="btn btn-default c_click_down "  style="color: #FFF; background-color:#0c93e9;float:left;margin-left: 5px;">当前列表</button>
+              <button  id="inpt_c_2" type="button" class="btn btn-default c_click_down"  style="color: #666;float:left;" >变更记录</button>
+           </div>
+
+
+            <div class="c_modal_contant_daochu c_qha_gb1" style="margin-top: 55px;display: block;">
+                 <div style="float: left;">
+                   <span  style=" line-height:30px;">抵押时间：</span>
+                 </div>
+                 <input   class="btn btn-default c_modal_daochu_text"  type="text" value="">
+                    <span style="color: #333">&nbsp;-</span>
+                 <input   class="btn  btn-default c_modal_daochu_text"  type="text" value="">
+           </div>
+
+
+           <div class="c_modal_contant_daochu c_modal_checkbox  c_qha_gb2"  style="display: none;margin-top: 55px;">
+               <span >变更时间：</span>
+               <div class="c_modal_checkbox_div">
+                   <input type="checkbox" name="chang" value="all" checked="checked">
+                   <span> 全部</span>
+                   <input type="checkbox" name="chang" value="产权状态" >
+                   <span>产权状态</span>
+                   <input type="checkbox" name="chang" value="抵押权人" >
+                   <span>抵押权人</span>
+                   <input type="checkbox" name="chang" value="其他" >
+                   <span>其他</span>
+               </div>
+           </div>
+           
+      </div>
+      <div style="margin-top: -5px;">
+           <span style="color:red;font-size: 12px;margin-left: 18px;">*当前列表是指当前抵押列表显示的全部项，变更记录是您所有抵押信息变更记录！</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </button>
+        <button type="button" class="btn btn-primary" id="c_modal_sumit">
+          一键导出
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
 
 
