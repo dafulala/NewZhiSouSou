@@ -15,37 +15,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ZhiSouSou@Development__ZhiSouSou.coverage" NAME="Development: ZhiSouSou Coverage Results" MODIFIED="1501207874378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ZhiSouSou" />
+    <SUITE FILE_PATH="coverage/ZhiSouSou@Development__ZhiSouSou.coverage" NAME="Development: ZhiSouSou Coverage Results" MODIFIED="1501335434880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ZhiSouSou" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/xi_tongshezhi/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15015">
-              <caret line="1001" column="24" lean-forward="false" selection-start-line="1001" selection-start-column="24" selection-end-line="1001" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="javascript.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/javascript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9795">
-              <caret line="653" column="67" lean-forward="false" selection-start-line="653" selection-start-column="67" selection-end-line="653" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="744" column="14" lean-forward="true" selection-start-line="744" selection-start-column="14" selection-end-line="744" selection-end-column="14" />
+              <folding>
+                <element signature="n#type#0;n#input#6;n#div#3;n#div#2;n#div#9;n#!!top" expanded="false" />
+                <marker date="1501337053411" expanded="false" signature="28746:28753" ph="×" />
+                <marker date="1501337053411" expanded="false" signature="29323:29401" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="29589:29620" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="32985:33014" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="35568:35575" ph="×" />
+                <marker date="1501337053411" expanded="false" signature="36662:36676" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="37698:37727" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="37780:37813" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="37837:37869" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="38654:38666" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="38983:38995" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="39751:39768" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="39792:39851" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="39942:39967" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="39990:40063" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="40571:40666" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="40707:40736" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="40758:40846" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="40869:40980" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="41081:41126" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="41167:41196" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="41220:41239" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="41273:41385" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="41448:41483" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="41640:41652" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="42938:42967" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="45469:45486" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="46449:46460" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="47686:47729" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="48462:48475" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="48604:48615" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="50160:50171" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="51462:51473" ph="..." />
+                <marker date="1501337053411" expanded="false" signature="52516:52527" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,68 +69,28 @@
       <file leaf-file-name="qi_yexiangqing_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/qi_yexiangqing_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qi_yejiankong_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/qi_yejiankong_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="72" column="72" lean-forward="true" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jian_kongdongtai_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/jian_kongdongtai_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="di_yajiankong_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/di_yajiankong_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bid_evaluate.js.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/bid_evaluate.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/index.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -126,6 +102,7 @@
     <findStrings>
       <find>s-time-te</find>
       <find>分类</find>
+      <find>工商基本信息</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -135,7 +112,6 @@
         <option value="$PROJECT_DIR$/app/controllers/she_baojiankong_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/di_yajiankong_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/jian_kongdongtai_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/qi_yexiangqing_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/xi_tongshezhi_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/she_baojiankong.scss" />
@@ -163,9 +139,12 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/qi_yejiankong.scss" />
         <option value="$PROJECT_DIR$/app/views/xi_tongshezhi/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/_footer.scss" />
-        <option value="$PROJECT_DIR$/app/views/qi_yexiangqing/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/qi_yexiangqing/index.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/qi_yexiangqing/bid_evaluate.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/qi_yexiangqing/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/qi_yexiangqing_controller.rb" />
       </list>
     </option>
   </component>
@@ -183,10 +162,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="231" />
-    <option name="y" value="53" />
-    <option name="width" value="1453" />
-    <option name="height" value="1017" />
+    <option name="x" value="36" />
+    <option name="y" value="59" />
+    <option name="width" value="1306" />
+    <option name="height" value="929" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -204,6 +183,7 @@
     </navigator>
     <panes>
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -597,7 +577,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -939,12 +918,14 @@
       <workItem from="1500537986720" duration="23795000" />
       <workItem from="1501125288604" duration="1415000" />
       <workItem from="1501160498833" duration="7680000" />
-      <workItem from="1501318120846" duration="53000" />
+      <workItem from="1501318120846" duration="193000" />
+      <workItem from="1501319514778" duration="2241000" />
+      <workItem from="1501329405922" duration="8405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52140000" />
+    <option name="totallyTimeSpent" value="62926000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -956,14 +937,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="231" y="53" width="1453" height="1017" extended-state="0" />
+    <frame x="36" y="59" width="1306" height="929" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23496108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23854661" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26719278" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2953692" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -998,20 +979,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/_footer.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1261,15 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/qi_yexiangqing_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,15 +1242,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/di_yajiankong_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1301,7 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9795">
           <caret line="653" column="67" lean-forward="false" selection-start-line="653" selection-start-column="67" selection-end-line="653" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,15 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15015">
-          <caret line="1001" column="24" lean-forward="false" selection-start-line="1001" selection-start-column="24" selection-end-line="1001" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,22 +1270,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="72" column="72" lean-forward="true" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
-          <folding />
+        <state relative-caret-position="1080">
+          <caret line="72" column="72" lean-forward="false" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="360">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/bid_evaluate.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="744" column="14" lean-forward="true" selection-start-line="744" selection-start-column="14" selection-end-line="744" selection-end-column="14" />
+          <folding>
+            <element signature="n#type#0;n#input#6;n#div#3;n#div#2;n#div#9;n#!!top" expanded="false" />
+            <marker date="1501337053411" expanded="false" signature="28746:28753" ph="×" />
+            <marker date="1501337053411" expanded="false" signature="29323:29401" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="29589:29620" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="32985:33014" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="35568:35575" ph="×" />
+            <marker date="1501337053411" expanded="false" signature="36662:36676" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="37698:37727" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="37780:37813" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="37837:37869" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="38654:38666" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="38983:38995" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="39751:39768" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="39792:39851" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="39942:39967" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="39990:40063" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="40571:40666" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="40707:40736" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="40758:40846" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="40869:40980" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="41081:41126" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="41167:41196" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="41220:41239" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="41273:41385" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="41448:41483" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="41640:41652" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="42938:42967" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="45469:45486" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="46449:46460" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="47686:47729" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="48462:48475" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="48604:48615" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="50160:50171" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="51462:51473" ph="..." />
+            <marker date="1501337053411" expanded="false" signature="52516:52527" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/qi_yexiangqing_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/qi_yexiangqing/index.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
