@@ -1,26 +1,44 @@
 <div class="y-xysj">
-	<div class="y-xysj-contant">
-<div class=" y-xysj-contant-left panel-group" id="accordion">
-	<div class="y-xysj-contant-left-part panel panel-default" id="y-xysj-contant-left-part">
-	  
-		<a data-toggle="collapse" data-parent="#accordion" 
-		   href="#collapseOne" class="y-xysj-contant-left-part-title sss">
-			警示信息<span class="fa fa-chevron-right" style="display:block;float:right;"></span>
-		</a>
+  <div class="y-xysj-contant">
+    <div class=" y-xysj-contant-left panel-group" id="accordion">
+	  <div class="y-xysj-contant-left-part panel panel-default" id="y-xysj-contant-left-part">
+	    <script type="text/javascript">
+	    	$('.y-xysj-contant-left-part-txt').ready(function(){
 
-		<div id="collapseOne" class="panel-collapse collapse in y-xysj-contant-left-part-txt">
+	    	   $('.y-xysj-contant-left-part-txt ~ div').attr('class','panel-collapse collapse  y-xysj-contant-left-part-txt')
+	    	   $('.y-xysj-contant-left-part').children('div:first').attr('class','panel-collapse collapse in y-xysj-contant-left-part-txt')
+	    	   $(".y-xysj-contant-left-part").children('a:first').css('background','#4285f4');
+	    	    $(".y-xysj-contant-left-part").children('a:first').css('color','#fff');
+	    	    
+	    	});
+	    </script>
+	    <% @obj["SZ_Credit"].each do |ke , message| %>
+		<a data-toggle="collapse" data-parent="#accordion" 
+		   href="#collapseOne" class="y-xysj-contant-left-part-title">
+         <%= ke %>
+		<span class="fa fa-chevron-right" style="display:block;float:right;"></span>
+		</a>
+      
+		<div id="collapseOne" class="panel-collapse collapse  y-xysj-contant-left-part-txt">
 		    
+		 
+		  <ul id="liebiao" class="panel-body">
+		  <% message.each do |message_two| %>
+		
+	    	<li><a href="#" class="y-xysj-contant-left-part-lb">
+            <%= message_two[0] %>
+          
+		    </a></li>
 		    
-		    <ul id="liebiao" class="panel-body">
-		    	<li><a href="#" class="y-xysj-contant-left-part-lb">中货车违法乱纪情况</a></li>
-		    	<li><a href="#" class="y-xysj-contant-left-part-lb">交通运输行政处罚信息</a></li>
-		    	<li><a href="#" class="y-xysj-contant-left-part-lb">企业工伤事故发生情况</a></li>
-		    </ul>
-		    
+		  <% end %>
+		
+		  </ul>
 		
 	    </div>
-	</div>
-	<div class="y-xysj-contant-left-part panel panel-default" id="y-xysj-contant-left-part">
+	    <% end %>
+	  </div>
+    </div>
+	<!-- <div class="y-xysj-contant-left-part panel panel-default" id="y-xysj-contant-left-part">
 		<a data-toggle="collapse" data-parent="#accordion" 
 		   href="#collapseTwo" class="y-xysj-contant-left-part-title">
 			登记备案<span class="fa fa-chevron-right" style="display:block;float:right;"></span>
@@ -49,57 +67,32 @@
 			    </ul>
 		
 		</div>
-	</div>
-</div>
-	<div class="y-xysj-contant-right">
-	  <div class="y-xysj-contant-right-c">
-		<table class="y-xysj-contant-right-c-t">
-			<thead class="yyxcr-table-head">
-				<tr>
-					<th width="30%">名称</th>
-					<th>信息</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	  </div>
-	  <div class="y-xysj-contant-right-c">
-		<table class="y-xysj-contant-right-c-t">
-			<thead class="yyxcr-table-head">
-				<tr>
-					<th width="30%">名称</th>
-					<th>信息</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	  </div>
-	  <div class="y-xysj-contant-right-c">
-		<table class="y-xysj-contant-right-c-t">
-			<thead class="yyxcr-table-head">
-				<tr>
-					<th width="30%">名称</th>
-					<th>信息</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	  </div>
-	</div>
+	</div> -->
+
+  <div class="y-xysj-contant-right">
+   
+	  <% @first_data.each do |xinx|%>
+	  <table class="y-xysj-contant-right-c-t">
+		<thead class="yyxcr-table-head">
+		  <tr>
+			<th width="30%">名称</th>
+			<th>信息</th>
+		  </tr>
+		</thead>
+		<tbody>
+		<% xinx.each do |km,sj|%>
+		  <tr id="xy-table-contant">
+			<td><%= km %></td>
+			<td><%= sj%></td>
+          </tr>
+		<% end %>
+			
+	    </tbody>
+	  </table>
+	  <% end %>
+      <%= paginate @first_data, parma_name: :first_page, remote:true %>
+	
+  </div>
+
 </div>
 	</div>
