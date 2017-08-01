@@ -1,0 +1,10 @@
+$(".y-xysj-contant-right").empty();
+ <% @first_data.each do |xinx|%>
+
+ $(".y-xysj-contant-right").append('<table class="y-xysj-contant-right-c-t"><thead class="yyxcr-table-head"><tr><th width="30%">名称</th><th>信息</th></tr></thead><tbody id="xy-table-contant"><% xinx.each do |km,sj|%><tr><td><%= km %></td><td><%= sj%></td></tr> <% end %></tbody></table>')
+ 
+
+
+
+ <% end %>
+  $("#table_bottom").html('<%= escape_javascript(paginate @first_data,:type=>"bid",:remote=>true)%>');				

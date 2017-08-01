@@ -1,0 +1,13 @@
+$("#bid_change_tbody").empty()
+
+<%  @bid_change.each do |bid_change|  %>
+
+
+$("#bid_change_tbody").append("    <tr><td>1</td> <td><%=  bid_change['title'] %></td> <td><%=  bid_change['date'] %></td> <td><%= bid_change['address'] %></td>  </tr>                    ")
+
+
+
+<% end %>
+
+
+    $("#bid_change_div").html(    '<%=       escape_javascript  (paginate @bid_change,  :type => "bid_change",:remote=>true)    %>'       )

@@ -1,0 +1,13 @@
+$("#bided_result_tbody").empty()
+
+  <%  @bid_result.each do |one_result|  %>
+$("#bided_result_tbody").append("    <tr class='c_tb_tr'>  <td>1</td>  <td class='c_text_left'><%=  one_result['title'] %></td>   <td><%=  one_result['date'] %></td>    <td><%= one_result['address'] %></td>    <td> </td> </tr>                    ")
+
+<% end %>
+
+
+        $("#bided_result_div").html(    '<%=       escape_javascript  (paginate @bid_result,  :type => "bidedResult",:remote=>true)    %>'       )
+
+
+
+

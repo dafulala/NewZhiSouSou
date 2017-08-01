@@ -18,20 +18,27 @@
 		    	
 		    </tr>
 		  </thead>
-		  <tbody>
+		  <tbody id="business_tbody">
+      <% @business.each do |a| %>
 			<tr class="li_tbody_tr">
+				<td><%= a['information'] %></td>
 				<td></td>
-				<td></td>
-				<td  data-toggle="modal" data-target="#myModal9">[19]家关联企业</td>
+				<td  data-toggle="modal" data-target="#myModal9"><%= a['enterprises'] %></td>
 				<td></td>
 			                  <td></td>
 			                  <td><i class="glyphicon glyphicon-eye-open" style="font-size:20px;color: #FC7C3C;"></i></td>
 				<td><input class=" btn btn-primary l_inp_name"  style="z-index:- 1; background-color: #24AAFF;   border: 1px solid  #DDDDDD;"  type="button" value="搜索企业" name="" > </td>
 			            
 			</tr>
+          <% end %>
 			
 		  </tbody>
-		</table>  
+		</table>
+    <div id="business" >
+
+      <%= paginate @business,   :params=> {  :type=>   :business},  :remote=>true %>
+
+    </div>
 	</div>
 </div>
 </div>

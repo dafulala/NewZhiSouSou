@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
 
-	      get 'she_baojiankong/index'
-                     get  'qi_yexiangqing/index'
+	      get 'socials/index'
+                     get  'details/index'
                     get  'users/index'
 
 
-    get 'di_yajiankong/index'
-    get 'jian_kongdongtai/index'
-  root 'qi_yejiankong#index'
-  resources :qi_yejiankong
+    get 'mortgages/index'
+    get 'dynamics/index'
+  root 'business#index'
+  resources :business
 
-    get 'xi_tongshezhi/index'
-    get 'qiyediya/index'
+    get 'settings/index'
+
     resources :users
     resources :sessions
 

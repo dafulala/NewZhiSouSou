@@ -1,0 +1,29 @@
+$("#c_pg").empty();
+
+<% @related.each do | source | %>
+
+$("#c_pg").append(' <ul  id="c_pg">\
+               	  	<li  style="width: 95%;"  >\
+               	  	      <div class="c_fl_fy" >\
+               	  		<h5 class="c_fl_h" >1</h5>\
+               	  		<div class="c_fl_h_div"> \
+               	  			<div class="c_fl_h_div_div">\
+               	  				<strong class="c_fl_h_span">目标企业</strong>\
+               	  			</div>\
+               	  		</div>\
+               	  		<div class="c_fl_ss_span" >\
+  				<span class=" c_fl_fl_span">当事人：<a href="" title="" id="c_page"><%= source["litigant"] %></a> </span>\
+  				<span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">案号：<strong id="c_page"><%= source["caseNo"] %></strong></span>\
+  				<span style="float: left;width: 33.3%">案由：<strong id="c_page"><%= source["caseReason"] %></strong></span>\
+  				<span  style="float: left;width: 33.3%">立案时间：<strong id="c_page"><%= source["establishTime"] ["$numberLong"]%></strong></span>\
+  				<span  style="width: 33.3%">分类：<strong id="c_page"><%= source["type"] %></strong></span>\
+  				<span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>\
+               	  		</div>\
+               	  	      </div>\
+               	  	</li>\
+               	      </ul> ')
+
+<% end %>
+
+
+$("#c_page_div").html('<%=  escape_javascript(paginate @related,  :type=> "source", :remote=>true) %>')

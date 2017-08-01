@@ -1,0 +1,21 @@
+$("#business_tbody").empty()
+
+<%  @business.each do |a|  %>
+
+
+$("#business_tbody").append("    	<tr class='li_tbody_tr'>\
+                                       <td><%= a['information'] %></td>\
+<td></td>\
+<td  data-toggle='modal' data-target='#myModal9'><%= a['enterprises'] %></td>\
+    <td></td>\
+    <td></td>\
+    <td><i class='glyphicon glyphicon-eye-open' style='font-size:20px;color: #FC7C3C;'></i></td>\
+    <td><input class=' btn btn-primary l_inp_name'  style='z-index:- 1; background-color: #24AAFF;   border: 1px solid  #DDDDDD;'  type='button' value='搜索企业' name='' > </td>\
+    </tr>\                  ")
+
+
+
+<% end %>
+
+
+    $("#business").html(    '<%=       escape_javascript  (paginate @business,  :type => "business",:remote=>true)    %>'       )

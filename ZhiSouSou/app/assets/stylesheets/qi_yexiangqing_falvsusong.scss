@@ -15,7 +15,7 @@
   background-color: #fff;
   border:1px solid #ddd;
   margin: 0 auto;
-  overflow: hidden;
+  background-color: #fff;
   box-shadow:0 0 3px #ccc;
 }
 .c_flss_top{
@@ -39,11 +39,12 @@
 }
 
 .c_flss_bttom_zuo{
-  width: 25%;
+  width: 340px;
+  min-height: 639px;
   float: left;
   margin-top: 40px;
   font-size: 14px;
-  div{
+ /*  div{
     margin-left: 42px;
     border: 1px solid #f6f6f6;
     background-color: #f7f7f7;
@@ -51,28 +52,74 @@
     border-radius: 3px;
     height: 40px;
     line-height: 20px;
-    span{
+  /*   span{
       margin-left: 15px;
       display: block;
       margin-top: 10px;
-    }
-  }
-}
-#c_flss_bttom_zuo_gs{
-  margin-left: 30px;
-  border: 1px solid #008be7;
-  background-color: #0c93e9;
-  color: #fff;
-  margin-top: 15px;
-  display: none;
-}
-#c_flss_bttom_zuo_gl{
-  margin-top: 33px;
+    } */
+
 }
 
+#c_flss_bttom_zuo_gl{
+  margin-top: 33px;
+  max-height: 515px;
+  top: 124px;
+  width: 340px;
+  overflow-y: auto;
+  overflow-x:hidden; 
+  padding: 30px 20px 10px 30px;
+}
+#c_flss_bttom_zuo_gl  dl{
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+#c_flss_bttom_zuo_gl  dt{
+  display: block;
+  line-height: 1.42857143;
+  box-sizing: border-box;
+  font-weight: normal;
+  color: #777;
+  background-color: #eee;
+}
+#c_flss_bttom_zuo_gl a{
+  display: block;
+  text-decoration: none;
+  width: 280px;
+  border: 1px solid #eee;
+  background-color: #f4faff;
+    margin: 12px 0;
+    border-radius: 2px;
+    padding: 3px 10px;
+    font-size: 14px;
+    background: #f4faff;
+    margin-left: 15px;
+}
+#c_flss_bttom_zuo_gl a:hover{
+  background-color:  #0c93e3;
+  color: #fff;
+}
+#c_flss_bttom_zuo_gl a span{
+  display: block;
+  float: right;
+  margin-top: -1px;
+  color: #999;
+}
+#c_flss_bttom_zuo_gl  dd{
+  border: 0px solid #fff;
+}
+#c_flss_bttom_zuo_gl a span:hover{
+
+  color: #fff;
+}
 .c_flss_bttom_you{
   width: 70.8%;
-  margin-left: 50px;
+
+  margin-left: 20px;
   float: left;
   margin-top: 19px;
 }
@@ -129,17 +176,7 @@
   }
 }
 
-.c_flss_bttom_gx{
-  span{
-    font-size: 14px;
-  }
-}
-.c_flss_sj {
-  span {
-    position: relative;
-    left: 50%;
-  }
-}
+
 .c_ss_width{
   width: 1000px;
   margin-left: -200px;
@@ -167,3 +204,81 @@
     text-decoration: none;
 }
 
+.c_fl_fy{
+  width: 100%;
+ padding: 20px;
+ overflow: hidden;
+ border: 1px solid #eee;
+ box-shadow: 0 0 2px #f5f5f5;
+}
+.c_flss_sj li:hover{
+    border: 1px solid orange;  
+   box-shadow:0 0 5px #ccc;
+}
+
+.c_fl_h{
+   background: #eee;
+    float: left;
+    margin-right: 10px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+.c_fl_h_div{
+    overflow: hidden;
+    width: 110px;
+}
+.c_fl_h_div_div{
+    position: relative;
+    line-height: 20px;
+    margin-right: 10px;
+    float: left;
+    width: 110px;
+}
+.c_fl_h_span{
+       color: #f39800!important;
+    font-weight: bold!important;
+    margin-left: 20px;
+}
+.c_fl_ss_span{
+  width: 85%;
+  margin-left: 150px;
+  overflow: hidden;
+   margin-top: -20px;
+}
+.c_fl_ss_span span{
+  display: block;
+  color: #888;
+}
+.c_fl_ss_span span strong{
+   font-weight: normal;
+   color: #555;
+}
+.c_fl_fl_span{
+  padding-top: 10px;
+  a:hover{
+     text-decoration:none;
+  }
+}
+#c_fl_span_a{
+  font-size: 18px;
+}
+#c_fl_btspan{
+  font-size: 18px;
+  color: #666;
+     font-weight: normal;
+
+}
+#c_fl_zxbd{
+  color: red;
+}
+#c_crsj li{
+     margin-top: 20px;
+}
+.c_fl_fl_spanlast{
+  height: 10px;
+}

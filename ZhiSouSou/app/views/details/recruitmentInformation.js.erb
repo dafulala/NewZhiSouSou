@@ -1,0 +1,14 @@
+$("#recruitmentInformation").empty()
+
+<%  @recruitmentInformation.each do |one_result|  %>
+
+
+$("#recruitmentInformation").append("    <tr ><td>1</td><td ><%=one_result['position'] %></td><td><%= one_result['work_place'] %></td> <td><%=one_result['publish_time']['$numberLong'] %></td><td><%= one_result['salary'] %></td></tr> ")
+
+
+
+<% end %>
+
+
+
+$("#li_recruitmentInformation").html(   '    <%=     escape_javascript(  paginate  @recruitmentInformation,  :type => "recruitmentInformation",  :remote=>true   )      %>     '  );

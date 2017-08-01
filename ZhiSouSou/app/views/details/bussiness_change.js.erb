@@ -1,0 +1,14 @@
+
+
+
+$("#change_li").empty()
+
+<%      @change .each do |one|  %>
+
+
+$("#change_li").append("       <tr><td  style='width:100px'> <%=  one['ChangeDate'] %> </td><td >    <%=  one['ChangeMatters'] %>  </td>  <td>  <%=  one['before'] %>  </td>   <td>  <%=  one['after'] %>  </td>  </tr>                         ")
+<% end %>
+
+
+$("#business_change_paginate").html(   '    <%=     escape_javascript(  paginate  @change,  :type => "bid",  :remote=>true   )      %>     '  );
+

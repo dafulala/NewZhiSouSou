@@ -257,46 +257,46 @@
 				<tbody>
 					<tr class="y-tr">
 						<td width="15%" class="y-tr-title">统一社会信用代码：</td>
-						<td width="40%"></td>
+						<td> <%= @business_informations["unified_credit_code"]  %> </td>
 						<td width="15%" class="y-tr-title">组织机构代码：</td>
-						<td width="30%">123114113</td>
+						<td> <%= @business_informations["orgnization_code"]  %> </td>
 					</tr >
 					<tr class="y-tr">
 						<td class="y-tr-title">组册号：</td>
-						<td>123940819084748341074</td>
+						<td> <%= @business_informations["register_code"]  %> </td>
 						<td class="y-tr-title">经营状态：</td>
-						<td>在营（开业）企业</td>
+						<td> <%= @business_informations["status"]  %> </td>
 					</tr>
 					<tr class="y-tr">
 						<td class="y-tr-title">公司类型：</td>
-						<td>股份有限公司</td>
+						<td> <%=@business_informations["type"]  %></td>
 						<td class="y-tr-title">成立日期：</td>
-						<td>1997年02月05日</td>
+						<td> <%= @business_informations["date"]  %></td>
 						
 					</tr>
 					<tr class="y-tr">
 						<td class="y-tr-title">法定代理人：</td>
-						<td>李海健</td>
+						<td> <%= @business_informations["legal_representation"]  %></td>
 						<td class="y-tr-title">营业期限：</td>
-						<td>1997年05月02日至</td>
+						<td> <%= @business_informations["during"]  %></td>
 					</tr>
 					<tr class="y-tr">
 						<td class="y-tr-title">注册资本：</td>
-						<td>2318.841948918万人民币</td>
+						<td> <%= @business_informations["registered_capital"]  %></td>
 						<td class="y-tr-title">发照日期：</td>
-						<td>2016年04月11日</td>
+						<td> <%= @business_informations["issue_date"]  %></td>
 					</tr>
 					<tr class="y-tr">
 						<td class="y-tr-title">登记机关：</td>
-						<td colspan="3">市市场和质量监管委南山局</td>
+						<td> <%= @business_informations["registration_authority"]  %></td>
 					</tr>
 					<tr class="y-tr">
 						<td class="y-tr-title">企业地址：</td>
-						<td colspan="3">深圳市南山区高新南一道创维大厦C座13、14楼</td>
+						<td> <%= @business_informations["business_address"]  %></td>
 					</tr>
 					<tr class="y-tr">
 						<td class="y-tr-title">经营范围：</td>
-					    <td colspan="3">投资兴办实业（具体项目另行申报）；合同能源管理、锅炉房节能技术、热泵技术、电厂热泵应用技术、太阳能技术、热网平衡改造技术、热网平衡技术的开发；节能产品、计算机软件、设备管理与能源管理信息化及服务、节能机电工程与信息系统集成及服务、国内贸易（法律、行政法规、国务院决定规定在登记前须批准的项目除外）；货物及技术进出口（法律、行政法规、国务院决定禁止的项目除外，限制的项目须取得许可后方可经营）；节能方案咨询、信息咨询（不含人才中介、证券、保险、基金、金融业务及其它限制项目）。</td>
+					    <td colspan="3"> <%= @business_informations["scope_of_business"]  %></td>
 					</tr>
 				</tbody>
 			</table>
@@ -306,10 +306,16 @@
 	<div class="y-jbxx-part">
 	    <h2>主要人员</h2>	
 		<div class="y-jbxx-part-contant">
+
+                                           <%   @key_person.each  do |  one_person  |  %>
+ 
 			<div class="y-jbxx-part-contant-people">
-				<div><img src="../../images/key-person.png" class="y-jbxx-part-contant-people-img"></div>
-				<span>name</span>
+				<div><img src=<%= image_path   "key_person.png" %> class="y-jbxx-part-contant-people-img"></div>
+				<div> <%= one_person["name"]%>  </div>
+				<div> <%= one_person["position"]%> </div>
 			</div>
+                                          <%  end %>
+
 		</div>
 	</div>
 	<div class="y-jbxx-part">
@@ -317,13 +323,18 @@
 		<h2>股东信息</h2>
 		<div class="y-jbxx-part-contant">
 		    <ul>
+
+                                              <%  @holders.each do |important_people| %>
+
 		    	<li>
 		    		<div class="y-jbxx-part-contant-people">
-		    			<h4><strong>北京市第五建筑工程集团有限公司</strong><span>企业法人</span></h4>
-		    			<p><strong> 认资初缴</strong><span>10200万人民币／-</span></p>
-		    			<p><strong> 实际出缴</strong><span>10200万人民币／-</span></p>
+		    			<h4><strong><%=important_people["shareholder"]%></strong><span>企业法人</span></h4>
+		    			<p><strong> 认资初缴</strong><span><%= important_people["pay_should_money"]%>/<%= important_people[" pay_should_time"]%></span></p>
+		    			<p><strong> 实际出缴</strong><span><%= important_people["pay_actual_money"]%>/<%= important_people["pay_actual_time"]%></span></p>
 		    		</div>
 		    	</li>
+                                             <% end %>
+
 		    </ul>
 		</div>
 		
@@ -340,15 +351,30 @@
 		   			<th width="32.5%">变更后内容</th>
 		   		</tr>
 		   	</thead>
-		   	<tbody>
+		   	<tbody id="change_li">
+		   	<%   @change.each do | change|  %>
 		   		<tr>
-		   			<td></td>
-		   			<td></td>
-		   			<td></td>
-		   			<td></td>
+		   			<td><%=    change[  "before" ] %>   </td>
+		   			<td><%=    change[     "ChangeMatters"  ] %> </td>
+		   			<td><%=    change[ "ChangeDate" ] %> </td>
+		   			<td><%=    change[     "_id"  ] %> </td>
 		   		</tr>
+		   		<%end %>
 		   	</tbody>
+
+
+
 		   </table>
+
+                                
+                           <div id="business_change_paginate" >
+		 
+		   <%= paginate @change,   :params=> {  :type=>   :bussiness_change},  :remote=>true %> 
+
+                       </div>
+
+
+
 		</div>
 		
 	</div>
@@ -356,26 +382,20 @@
 		<h2>对外投资</h2>
 		<div class="y-jbxx-part-contant">
 		    <ul class="y-jbxx-part-contant-lone">
+                               
+                                  <%  @invested.each do | company |  %>
 		    	<li>
 		    		<div class="y-jbxx-part-contant-lone-div">
-		    			<h4>承德长泰集方生态公园开发有限公司</h4>
-		    			<span>法定代表人：王列卡</span>
-		    			<span>成立日期：2017-01-19</span>
-		    			<span>注册资本：1000万人民币</span>
-		    			<span>企业地址：评先坪村简介啊看浓墨重彩现在才能大喊</span>
+		    			<h4><%= company["name"] %></h4>
+		    			<span>法定代表人：-</span>
+		    			<span>成立日期：-</span>
+		    			<span>注册资本：-</span>
+		    			<span>企业地址：-</span>
 		    		</div>
 		    	</li>
-		    	<li>
-		    		<div>
-		    		    
-		    			<h4>承德长泰集方生态公园开发有限公司</h4>
-		    			<span>法定代表人：王列卡</span>
-		    			<span>成立日期：2017-01-19</span>
-		    			<span>注册资本：1000万人民币</span>
-		    			<span>企业地址：评先坪村简介啊看浓墨重彩现在才能大喊</span>
-		    		   
-		    		</div>
-		    	</li>
+                                      <% end %>
+
+		    
 		    </ul>
 		</div>
 		
@@ -439,114 +459,122 @@
  -->
 
 
-  <!--经营信息-->
 
 
-<div class="y-xysj qyxq_menu_display_3"  style="position: relative;top: 87px;">
-	<div class="y-xysj-contant">
-<div class=" y-xysj-contant-left panel-group" id="accordion">
-	<div class="y-xysj-contant-left-part panel panel-default">
-	  
-		<a data-toggle="collapse" data-parent="#accordion" 
-		   href="#collapseOne" class="y-xysj-contant-left-part-title ">
-			警示信息
-		</a>
 
-		<div id="collapseOne" class="panel-collapse collapse y-xysj-contant-left-part-txt">
-		    
-		    
-		    <ul id="liebiao" class="panel-body">
-		    	<li><a href="#" class="y-xysj-contant-left-part-lb">中货车违法乱纪情况</a></li>
-		    	<li><a href="#" class="y-xysj-contant-left-part-lb">交通运输行政处罚信息</a></li>
-		    	<li><a href="#" class="y-xysj-contant-left-part-lb">企业工伤事故发生情况</a></li>
-		    </ul>
-		    
-		
-	    </div>
-	</div>
-	<div class="y-xysj-contant-left-part panel panel-default">
-		<a data-toggle="collapse" data-parent="#accordion" 
-		   href="#collapseTwo" class="y-xysj-contant-left-part-title">
-			登记备案
-		</a>
-		<div id="collapseTwo" class="panel-collapse collapse y-xysj-contant-left-part-txt">
-		
-			    <ul id="liebiao" class="panel-body">
-			    	<li><a href="" class="y-xysj-contant-left-part-lb">税务登记信息（地税</a></li>
-					<li><a href="#" class="y-xysj-contant-left-part-lb">企业参保信息</a></li>
-					<li><a href="#" class="y-xysj-contant-left-part-lb">住房公积金缴存数据表</a></li>
-					<li><a href="#" class="y-xysj-contant-left-part-lb">税务登记信息（国税</a></li>
-			    </ul>
-		
-		</div>
-	</div>
-	<div class="y-xysj-contant-left-part panel panel-default">
-		<a data-toggle="collapse" data-parent="#accordion" 
-		   href="#collapseThree" class="y-xysj-contant-left-part-title">
-			认证信息
-		</a>
-		<div id="collapseThree" class="panel-collapse collapse y-xysj-contant-left-part-txt">
-			
-			    <ul id="liebiao" class="panel-body">
-			    	<li><a href="#" class="y-xysj-contant-left-part-lb">电子商务认证企业信息</a></li>
-					<li><a href="#" class="y-xysj-contant-left-part-lb">电子商务认证企业网站信息</a></li>
-			    </ul>
-		
-		</div>
-	</div>
-    </div>
-	<div class="y-xysj-contant-right">
-	  <div class="y-xysj-contant-right-c">
-		<table class="y-xysj-contant-right-c-t">
-			<thead class="yyxcr-table-head">
-				<tr>
-					<th width="30%">名称</th>
-					<th>信息</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	  </div>
-	  <div class="y-xysj-contant-right-c">
-		<table class="y-xysj-contant-right-c-t">
-			<thead class="yyxcr-table-head">
-				<tr>
-					<th width="30%">名称</th>
-					<th>信息</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	  </div>
-	  <div class="y-xysj-contant-right-c">
-		<table class="y-xysj-contant-right-c-t">
-			<thead class="yyxcr-table-head">
-				<tr>
-					<th width="30%">名称</th>
-					<th>信息</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	  </div>
-	</div>
+<div class="y-xysj qyxq_menu_display_3" style="margin-top: 100px;">
+  <div class="y-xysj-contant">
+    <div class=" y-xysj-contant-left panel-group" id="accordion">
+	  <div class="y-xysj-contant-left-part panel panel-default" id="y-xysj-contant-left-part">
+	    <script type="text/javascript">
+	    	$('.y-xysj-contant-left-part-txt').ready(function(){
+	    	   $('.y-xysj-contant-left-part-txt ~ div').attr('class','panel-collapse collapse  y-xysj-contant-left-part-txt')
+	    	   $('.y-xysj-contant-left-part').children('div:first').attr('class','panel-collapse collapse in y-xysj-contant-left-part-txt')
+	    	});
+
+
+	    	    $('.y-xysj-contant-left').ready(function(){
+
+        var a=$('.y-xysj-contant-left-part-txt');
+        var b=$('.y-xysj-contant-left-part-title');
+        var i=a.length;
+
+        for (var i =a.length; i>0; i--) {
+            b.attr('href','#'+i);
+            b.length-=1
+
+            a.attr('id',i);
+            a.length-=1
+        }
+    });
+
+    $('.y-xysj-contant-left').ready(function(){
+        var b=('.y-xysj-contant-left-part-title');
+
+        var la=1;
+        for (var la=1; la<=b.length; la++) {
+  
+            if($('#'+la).children('ul').children('li').length>0){
+      
+            }
+            else {
+            $('#'+la).remove();
+              
+            $("[href=#"+la+"]").remove();
+        
+            }
+
+        }
+    });
+
+	    </script>
+	 <% @obj["SZ_Credit"].each do |ke,message| %>
+<% message.delete('_id')%>
+<% puts "#{message}"%>
+<% unless @obj["SZ_Credit"][ke].blank?%>
+
+<a data-toggle="collapse" data-parent="#accordion" 
+href="#collapseOne" class="y-xysj-contant-left-part-title">
+<%= ke %>
+<span class="fa fa-chevron-right" style="display:block;float:right;"></span>
+</a>
+
+<div id="collapseOne" class="panel-collapse collapse y-xysj-contant-left-part-txt">
+
+
+<ul id="liebiao" class="panel-body">
+
+<% message.each do |message_two| %>
+<% unless @obj['SZ_Credit'][ke][message_two[0]].blank?%>
+
+<li><a href="#" class="y-xysj-contant-left-part-lb">
+<%= message_two[0] %>
+
+</a></li>
+<%end %>
+
+<% end %>
+
+</ul>
+
 </div>
-	</div>
+<% end %>
+<% end %>
+
+</div>
+</div>
+
+<div class="y-xysj-contant-right" >
+
+<% @first_data.each do |xinx|%>
+
+<table class="y-xysj-contant-right-c-t">
+<thead class="yyxcr-table-head">
+<tr>
+<th width="30%">名称</th>
+<th>信息</th>
+</tr>
+</thead>
+<tbody id="xy-table-contant">
+<% xinx.each do |km,sj|%>
+<tr >
+<td><%= km %></td>
+<td><%= sj%></td>
+</tr>
+<% end %>
+
+</tbody>
+</table>
+
+<% end %>
+
+</div>
+<div id="table_bottom">
+<%= paginate @first_data,:params=>{:type=>:bid},remote:true %>
+</div>
+</div>
+</div>
+
 
 
 
@@ -585,8 +613,8 @@
   </div>
 
   <div class="c_jyxx_center">
-    <h3 id="c_first_bt">
-      经营信息
+    <h4 id="c_first_bt">
+      经营异常
       <span>(1)</span>
     </h3>
     <div class="c_tb_all">
@@ -615,7 +643,7 @@
       </table>
     </div>
 
-    <h3>
+    <h4>
       股权出质
       <span>(0)</span>
     </h3>
@@ -640,7 +668,7 @@
       </table>
     </div>
 
-    <h3>
+    <h4>
       动产抵押
       <span>(0)</span>
     </h3>
@@ -666,7 +694,7 @@
       </table>
     </div>
 
-    <h3>
+    <h4>
       招聘信息
       <span>(0)</span>
     </h3>
@@ -681,15 +709,30 @@
             <th width="18%">薪资</th>
           </tr>
         </thaed>
-        <tbody>
-        <tr class="c_tb_tr">
-          <td colspan="5">暂无数据</td>
+        <tbody id="recruitmentInformation">
+         <% @recruitmentInformation.each do |coping_information| %>
+        <tr class="c_tb_tr" >
+          <td>1</td>
+          <td class="c_text_left"><%=coping_information["position"] %></td>
+          <td><%=coping_information["work_place"] %></td>
+          <td><%=coping_information["publish_time"]["$numberLong"] %></td>
+          <td><%=coping_information["salary"] %></td>
         </tr>
+              <% end %>
         </tbody>
       </table>
+   <div id="li_recruitmentInformation" >
+		 
+		   <%= paginate @recruitmentInformation,   :params=> {  :type=>   :recruitmentInformation},  :remote=>true %> 
+
+                       </div> 
     </div>
 
-    <h3>
+               
+             
+
+
+    <h4>
       行政处罚
       <span>(0)</span>
     </h3>
@@ -713,73 +756,8 @@
       </table>
     </div>
 
-    <h3>
+       <h4>
       招标公告
-      <span>(0)</span>
-    </h3>
-    <div class="c_tb_all">
-      <table class="table table-hover" >
-        <thaed class="c_tb_th">
-          <tr>
-            <th width="8%">序号</th>
-            <th width="50%">标题</th>
-            <th width="20%">发布时间</th>
-            <th width="12%">所属地区</th>
-            <th width="10%">查看</th>
-          </tr>
-        </thaed>
-        <tbody id="ZhaoBiao_time">
-            <% @ZhaoBiao_time.each do  |one| %>
-        <tr class="c_tb_tr" >
-
-          <td width="8%"></td>
-
-          <td width="50%"><%=one["title"]%></td>
-          <td width="20%"><%=one["date"]%></td>
-          <td width="12%"><%=one["address"]%></td>
-          <td width="10%"><a href="">查看</a></td>
-        </tr>
-            <% end %>
-        </tbody>
-
-      </table>
-      <%= paginate @ZhaoBiao_time,param_name: :ZhaoBiao_time,remote:true %>
-    </div>
-
-    <h3>
-      评标结果公示
-      <span>(0)</span>
-    </h3>
-    <div class="c_tb_all">
-      <table class="table table-hover">
-        <thaed class="c_tb_th">
-          <tr>
-            <th width="8%">序号</th>
-            <th width="50%">标题</th>
-            <th width="20%">发布时间</th>
-            <th width="12%">所属地区</th>
-            <th width="10%">查看</th>
-          </tr>
-        </thaed>
-     <tbody id="bid_evaluate">
-            <% @bid_evaluate.each do  |one| %>
-        <tr class="c_tb_tr" >
-
-          <td width="8%"></td>
-
-          <td width="50%"><%=one["title"]%></td>
-          <td width="20%"><%=one["date"]%></td>
-          <td width="12%"><%=one["address"]%></td>
-          <td width="10%"><a href="">查看</a></td>
-        </tr>
-            <% end %>
-        </tbody>
-      </table>
-        <%= paginate @bid_evaluate,param_name: :bid_evaluate,remote:true %>
-    </div>
-
-    <h3>
-      招标结果公示
       <span>(1)</span>
     </h3>
     <div class="c_tb_all" >
@@ -793,19 +771,101 @@
             <th width="10%">查看</th>
           </tr>
         </thaed>
-        <tbody>
-        <tr class="c_tb_tr">
+        <tbody id="bid_announcement">
+         <% @bid_announcement.each do |coping_information| %>
+        <tr class="c_tb_tr" >
+       
           <td>1</td>
-          <td class="c_text_left">范县2016年第二批统筹整合脱贫攻坚项目(10-18标段)中标公示变更</td>
-          <td>2017-06-23</td>
-          <td>濮阳市</td>
+          <td class="c_text_left"><%=coping_information["title"] %></td>
+          <td><%=coping_information["date"] %></td>
+          <td><%=coping_information["address"] %></td>
           <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
+
+    
         </tr>
+              <% end %>
         </tbody>
       </table>
+      <div id="bid_announcementtwo">
+             <%= paginate @bid_announcement, :params=>{ :type=> :bid_announcement  },remote:true %> 
+             </div>
+    </div>
+   <h4>
+      评标结果公示
+      <span>(1)</span>
+    </h3>
+    <div class="c_tb_all" >
+      <table class="table table-hover">
+        <thaed class="c_tb_th">
+          <tr>
+            <th width="8%">序号</th>
+            <th width="50%">标题</th>
+            <th width="20%">发布时间</th>
+            <th width="12%">所属地区</th>
+            <th width="10%">查看</th>
+          </tr>
+        </thaed>
+        <tbody  id="bid_result_tb">
+              <%  @bid_evaluate.each do |one_result|%>
+        <tr class="c_tb_tr">
+          <td>1</td>
+          <td class="c_text_left"><%=  one_result["title"] %></td>
+          <td><%=  one_result["date"] %></td>
+          <td><%= one_result["address"] %></td>
+          <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>  
+
+      <div id="bid_result_div">
+      <%= paginate @bid_evaluate, :params=>{ :type=> :bid_evaluate },remote:true %> 
+      </div>
+   
     </div>
 
-    <h3>
+
+    
+
+    <h4>
+      招标变更公示
+      <span>(1)</span>
+    </h3>
+    <div class="c_tb_all" >
+      <table class="table table-hover">
+        <thaed class="c_tb_th">
+          <tr>
+            <th width="8%">序号</th>
+            <th width="50%">标题</th>
+            <th width="20%">发布时间</th>
+            <th width="12%">所属地区</th>
+            <th width="10%">查看</th>
+          </tr>
+        </thaed>
+        <tbody id="bid_change_tbody">
+         <%  @bid_change.each do |one_result|%>
+        <tr class="c_tb_tr">
+          <td>1</td>
+          <td class="c_text_left"><%=  one_result["title"] %></td>
+          <td><%=  one_result["date"] %></td>
+          <td><%= one_result["address"] %></td>
+          <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+       
+
+     <div id="bid_change_div">
+      <%= paginate @bid_change, :params=>{ :type=> :bid_change },remote:true %> 
+      </div>
+   
+
+
+    </div>
+
+
+    <h4>
       中标结果公告
       <span>(24)</span>
     </h3>
@@ -820,45 +880,24 @@
             <th width="10%">查看</th>
           </tr>
         </thaed>
-        <tbody>
+       <tbody id="bided_result_tbody">
+         <%  @bid_result.each do |one_result|%>
         <tr class="c_tb_tr">
-          <td >1</td>
-          <td class="c_text_left">会同县贫困村道路建设易地扶贫搬迁基础设施建设项目（A1－A7）标段中标候选人公示中标公告</td>
-          <td>2017-06-30</td>
-          <td >湖南省</td>
+          <td>1</td>
+          <td class="c_text_left"><%=  one_result["title"] %></td>
+          <td><%=  one_result["date"] %></td>
+          <td><%= one_result["address"] %></td>
           <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
         </tr>
-        <tr class="c_tb_tr">
-          <td >2</td>
-          <td class="c_text_left">郑州市轨道交通1号线二期工程及2号线一期工程交通设施恢复施工项目（二次）</td>
-          <td>2017-06-28</td>
-          <td >河南省</td>
-          <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
-        </tr>
-        <tr class="c_tb_tr">
-          <td >3</td>
-          <td class="c_text_left">芷江侗族自治县贫困县乡村基础设施建设项目（二期）村组道路建设工程（A14－A26标段）中标候选人公示中标公告 </td>
-          <td>2017-06-26</td>
-          <td >湖南省</td>
-          <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
-        </tr>
-        <tr class="c_tb_tr">
-          <td >4</td>
-          <td class="c_text_left">范县2016年第二批统筹整合脱贫攻坚项目（10-18标段）中标公告</td>
-          <td>2017-06-23</td>
-          <td >河南省</td>
-          <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
-        </tr>
-        <tr class="c_tb_tr">
-          <td >5</td>
-          <td class="c_text_left">栾川县叫河镇上房沟1#、2#桥新建工程中标候选人公示</td>
-          <td>2017-06-07</td>
-          <td >洛阳市</td>
-          <td><a href="" data-toggle="modal" data-target="#c_myModal_jy">详情</a></td>
-        </tr>
+        <% end %>
         </tbody>
       </table>
-      <ul class="pagination">
+       <div id="bided_result_div">
+      <%= paginate @bid_result, :params=>{ :type=> :bidedResult },remote:true %> 
+      </div>
+
+
+     <!--  <ul class="pagination">
         <li><a href="#">«</a></li>
         <li><a class="active" href="#">1</a></li>
         <li><a href="#">2</a></li>
@@ -868,7 +907,7 @@
         <li><a href="#">6</a></li>
         <li><a href="#">7</a></li>
         <li><a href="#">»</a></li>
-      </ul>
+      </ul> -->
     </div>
 
   </div>
@@ -960,6 +999,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <!--
 法律诉讼
  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -987,7 +1035,7 @@
 
 
 
-<div class="c_flss qyxq_menu_display_5"   style="position: relative;top: 87px;">
+<div class="c_flss qyxq_menu_display_5"   style="position: relative;top: 87px; overflow: hidden; ">
   <div class="c_flss_top">
     <a href="" class="btn btn-default c_flss_top_first">涉诉公告&nbsp&nbsp4</a>
     <a href="" class="btn btn-default">裁判文书&nbsp&nbsp1</a> <a href="" class="btn btn-default">被执行人&nbsp&nbsp0</a>
@@ -995,13 +1043,25 @@
   </div>
 
   <div class="c_flss_bttom_zuo">
-    <div class="c_mbgs">
-      <span>目标公司</span>
-      <div id="c_flss_bttom_zuo_gs" class="c_mbgs_gs"><span>深圳市景晔交通器材有限公司</span></div>
-    </div>
 
-    <div id="c_flss_bttom_zuo_gl">
-      <span>关联公司(0)</span>
+     <div id="c_flss_bttom_zuo_gl">
+
+         <dl>
+         	<dt>目标公司</dt>
+         	<dd></dd>
+         </dl>
+        <dl>
+        	<dt>
+        	     <i></i>	
+        	     关联公司(11)
+        	</dt>
+        	<dd>
+                    <a href="" title="">北京华为新郎科技有限责任公司  <span>1</span></a>
+                     <a href="" title="">北京华为新郎科技有限责任公司 <span>1</span></a>
+                     <a href="" title="">北京华为新郎科技有限责任公司 <span>1</span></a>
+                     <a href="" title="">北京华为新郎科技有限责任公司 <span>1</span></a>
+        	</dd>
+        </dl>
     </div>
   </div>
 
@@ -1041,40 +1101,186 @@
 
 
     <div class="c_flss_bttom_gx">
+
+   
+<!--  诉讼公告 -->
       <div>
         <div>
-          <h2>诉讼公告 <span>(0)</span></h2>
+              <h3>诉讼公告 <span>(0)</span></h3>
+               <div class="c_flss_sj" id="c_crsj">
+               	  <ul  id="c_pg">
+               	  <%  @related.each do |source| %>
+               	  	<li  style="width: 95%;"  >
+               	  	      <div class="c_fl_fy" >
+               	  		<h5 class="c_fl_h" >1</h5>
+               	  		<div class="c_fl_h_div"> 
+               	  			<div class="c_fl_h_div_div">
+               	  				<strong class="c_fl_h_span">
+               	  				    目标企业
+               	  				    <!-- <i class="fa fa-question-circle-o"></i> -->
+               	  				</strong>
+               	  			</div>
+               	  		</div>
+               	  		<div class="c_fl_ss_span" >
+  				<span class=" c_fl_fl_span">当事人：<a href="" title="" id="c_page"><%= source["litigant"] %></a> </span>
+  				<span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">案号：<strong id="c_page"><%= source["caseNo"] %></strong></span>
+  				<span style="float: left;width: 33.3%">案由：<strong id="c_page"><%= source["caseReason"] %></strong></span>
+  				<span  style="float: left;width:33.3%">立案时间：<strong id="c_page"><%= source["establishTime"] ["$numberLong"]%></strong></span>
+  				<span  id="c_fl_flei" style="width: 33.3%">分类：<strong id="c_page"><%= source["type"] %></strong></span>
+  				<span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>
+               	  		</div>
+               	  	      </div>
+               	  	</li>
+               	  	<% end %>
+               	  </ul>
+  
+             <div id="c_page_div">
+             	
+               	  <%= paginate @related, :params=>{ :type=> :source}, remote:true %>
+               
+             </div>
 
+               </div>
         </div>
-        <div class="c_flss_sj"><span>暂无数据</span></div>
       </div>
+
+
+    <!--    裁判文书 -->
       <div>
         <div>
-          <h2>裁判文书 <span>(0)</span></h2>
+              <h3>裁判文书 <span>(422)</span></h3>
+               <div class="c_flss_sj" id="c_crsj">
+               	  <ul  id="c_referee_ul">
+               	  <%  @referee.each do |caipan| %>
+               	  	<li  style="width: 95%;"  >
+               	  	      <div class="c_fl_fy" >
+               	  		<h5 class="c_fl_h" >1</h5>
+               	  		<div class="c_fl_h_div"> 
+               	  			<div class="c_fl_h_div_div">
+               	  				<strong class="c_fl_h_span">
+               	  				    目标企业
+               	  				    <!-- <i class="fa fa-question-circle-o"></i> -->
+               	  				</strong>
+               	  			</div>
+               	  		</div>
+               	  		<div class="c_fl_ss_span" >
+  				<span class=" c_fl_fl_span"><a href="" title="" id="c_page"><%= caipan["_id"] %></a> </span>
+  				<span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">当事人：<strong id="c_page"><%= caipan[""] %></strong></span>
+  				<span style="float: left;width: 33.3%">判决日期：<strong id="c_page"><%= caipan[""] %></strong></span>
+  				<span  style="float: left;width:33.3%">执行法院：<strong id="c_page"><%= caipan["courtName"] %></strong></span>
+  				<span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>
+               	  		</div>
+               	  	      </div>
+               	  	</li>
+               	  	<% end %>
+               	  </ul>
+  
+             <div id="c_referee">
+               	  <%= paginate @referee, :params=>{ :type=> :refereedcm}, remote:true %>
+             </div>
 
+               </div>
         </div>
-        <div class="c_flss_sj"><span>暂无数据</span></div>
       </div>
-      <div>
+
+
+
+
+
+      
+     <!-- 被执行人 -->
+     <div>
         <div>
-          <h2>被执行人<span>(0)</span></h2>
-
+          <h3>被执行人<span>(0)</span></h3>
         </div>
-        <div class="c_flss_sj"><span>暂无数据</span></div>
+         <div  class="c_flss_sj" id="c_crsj">
+               	  <ul id="c_debtorp_ul">
+                    <% @debtor.each do |people| %>
+               	  	<li  style="width: 95%;">
+               	  	      <div class="c_fl_fy" >
+               	  		<h5 class="c_fl_h" >1</h5>
+               	  		<div class="c_fl_h_div"> 
+               	  			<div class="c_fl_h_div_div">
+               	  				<strong class="c_fl_h_span">目标企业</strong>
+               	  			</div>
+               	  		</div>
+               	  		<div class="c_fl_ss_span" >
+               	  				<span class=" c_fl_fl_span"  id="c_fl_btspan"><%=  people["_id"] %></span>
+               	  				<span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">公司名称：<strong><%= people["pname"] %></strong></span>
+               	  				<span style="float: left;width: 33.3%">发布时间：<strong><%=  people["releaseTime"]["$numberLong"] %></strong></span>
+               	  				<span  style="float: left;width: 33.3%">执行标的：<strong id="c_fl_zxbd"><%= people["execMoney"] %></strong></span>
+               	  				<span  style="float: left;width: 33.3%" >立案法院：<strong><%= people["execCourtName"] %></strong></span>
+               	  				<span  style="float: left;width: 33.3%" >案件状态：<strong><%= people[""] %></strong></span>
+               	  				<span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>
+               	  		</div>
+               	  	      </div>
+               	  	</li>
+           <% end %>
+               	  </ul>
+
+          <div id="c_debtor_div">
+               	  <%= paginate @debtor, :params=>{ :type=> :debtorpl}, remote:true %>
+             </div>
+
+               </div>
       </div>
-      <div>
+
+
+  
+
+
+     <!-- 失信人 -->
+     <div>
         <div>
-          <h2>失信人<span>(0)</span></h2>
-
+          <h3>失信人<span>(0)</span></h3>
         </div>
-        <div class="c_flss_sj"><span>暂无数据</span></div>
+         <div  class="c_flss_sj" id="c_crsj">
+               	  <ul id="c_d_ul">
+                    <% @dishonest.each do |dishonest| %>
+               	  	<li  style="width: 95%;">
+               	  	      <div class="c_fl_fy" >
+               	  		<h5 class="c_fl_h" >1</h5>
+               	  		<div class="c_fl_h_div"> 
+               	  			<div class="c_fl_h_div_div">
+               	  				<strong class="c_fl_h_span">目标企业</strong>
+               	  			</div>
+               	  		</div>
+               	  		<div class="c_fl_ss_span" >
+               	  				<span class=" c_fl_fl_span"  id="c_fl_btspan"><a href="" title=""><%=  dishonest["_id"] %></a></span>
+               	  				<span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">公布时间：<strong><%=  dishonest["publishDate"] %></strong></span>
+               	  				<span style="float: left;width: 33.3%">执行法院：<strong><%=  dishonest["courtName"] %></strong></span>
+               	  				<span  style="float: left;width: 33.3%" >立案法院：<strong><%=  dishonest["gistUnit"] %></strong></span>
+               	  				<span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>
+               	  		</div>
+               	  	      </div>
+               	  	</li>
+           <% end %>
+               	  </ul>
+
+          <div id="c_dishonest_div">
+               	  <%= paginate @dishonest, :params=>{ :type=> :dishonestd}, remote:true %>
+             </div>
+
+               </div>
       </div>
+ 
+
+
+
+
+	   
     </div>
 
-    <br><br>
-  </div>
 
+  </div>
+   
 </div>
+
+
+
+
+
+
 
 
 
@@ -1137,7 +1343,6 @@
 
 
 
-
 <!--
 互联网动态信息
  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -1157,9 +1362,9 @@
 
 
 
-<div class="c_flss qyxq_menu_display_6"   style="position: relative;top: 87px;">
+<div class="c_flss qyxq_menu_display_6"   style="position: relative;top: 87px; display: inline-block; overflow: hidden;">
 
-  <div class="sc-nav">
+  <div class="sc-nav" style="overflow:hidden">
     <ul>
       <li style="padding:0px 5px;margin-top: 10px;">
         <span style="float: left; margin-right: 30px;">分类：</span>

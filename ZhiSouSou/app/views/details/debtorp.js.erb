@@ -1,0 +1,30 @@
+$("#c_debtorp_ul").empty();
+
+<% @debtor.each do | people | %>
+
+$("#c_debtorp_ul").append(' <ul  id="c_pg">\
+               	  	<li  style="width: 95%;"  >\
+               	  	      <div class="c_fl_fy" >\
+               	  		<h5 class="c_fl_h" >1</h5>\
+               	  		<div class="c_fl_h_div"> \
+               	  			<div class="c_fl_h_div_div">\
+               	  				<strong class="c_fl_h_span">目标企业</strong>\
+               	  			</div>\
+               	  		</div>\
+               	  		<div class="c_fl_ss_span" >\
+  				<span class=" c_fl_fl_span"  id="c_fl_btspan"><%=  people["_id"] %></span>\
+                          <span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">公司名称：<strong><%= people["pname"] %></strong></span>\
+                          <span style="float: left;width: 33.3%">发布时间：<strong><%=  people["releaseTime"]["$numberLong"] %></strong></span>\
+                          <span  style="float: left;width: 33.3%">执行标的：<strong id="c_fl_zxbd"><%= people["execMoney"] %></strong></span>\
+                          <span  style="float: left;width: 33.3%" >立案法院：<strong><%= people["execCourtName"] %></strong></span>\
+                          <span  style="float: left;width: 33.3%" >案件状态：<strong><%= people[""] %></strong></span>\
+                          <span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>\
+               	  		</div>\
+               	  	      </div>\
+               	  	</li>\
+               	      </ul> ')
+
+<% end %>
+
+
+$("#c_debtor_div").html('<%=  escape_javascript(paginate @debtor,  :type=> "debtorpl", :remote=>true) %>')

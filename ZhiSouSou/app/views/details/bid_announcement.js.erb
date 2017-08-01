@@ -1,0 +1,17 @@
+$("#bid_announcement").empty()
+
+
+
+
+
+   <% @bid_announcement.each do |coping_information| %>
+   $("#bid_announcement").append("<tr ><td>1</td><td><%=coping_information['title'] %></td><td><%=coping_information['data'] %></td><td><%=coping_information['address'] %></td></tr>")
+   <% end %>
+
+
+
+
+
+
+
+ $("#bid_announcementtwo").html(    '<%=       escape_javascript  (paginate @bid_announcement,  :type => "bid_announcement",:remote=>true)    %>'       )

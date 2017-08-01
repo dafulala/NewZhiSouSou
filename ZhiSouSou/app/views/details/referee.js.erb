@@ -1,0 +1,28 @@
+$("#c_referee_ul").empty();
+
+<% @referee.each do | caipan | %>
+
+$("#c_referee_ul").append(' <ul  id="c_referee_ul">\
+               	  	<li  style="width: 95%;"  >\
+               	  	      <div class="c_fl_fy" >\
+               	  		<h5 class="c_fl_h" >1</h5>\
+               	  		<div class="c_fl_h_div"> \
+               	  			<div class="c_fl_h_div_div">\
+               	  				<strong class="c_fl_h_span">目标企业</strong>\
+               	  			</div>\
+               	  		</div>\
+               	  		<div class="c_fl_ss_span" >\
+  				<span class=" c_fl_fl_span"><a href="" title="" id="c_page"><%= caipan["_id"] %></a> </span>\
+                                <span class=" c_fl_fl_span2"  style="float: left;width: 33.3%">当事人：<strong id="c_page"><%= caipan[""] %></strong></span>\
+                               <span style="float: left;width: 33.3%">判决日期：<strong id="c_page"><%= caipan[""] %></strong></span>\
+                               <span  style="float: left;width:33.3%">执行法院：<strong id="c_page"><%= caipan["courtName"] %></strong></span>\
+                              <span  class="c_fl_fl_spanlast"><a href="" title=""></a></span>\
+               	  		</div>\
+               	  	      </div>\
+               	  	</li>\
+               	      </ul> ')
+
+<% end %>
+
+
+$("#c_referee").html('<%=  escape_javascript(paginate @referee,  :type=> "refereedcm", :remote=>true) %>')
