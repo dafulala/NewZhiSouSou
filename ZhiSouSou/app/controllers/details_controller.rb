@@ -24,6 +24,7 @@ class DetailsController < ApplicationController
     @change = Kaminari.paginate_array(@change).page(params[:page]  ).per(3)
       ##对外投资
    @invested =  @base_infomations["invested"]
+   @invested = Kaminari.paginate_array(@invested).page(params[:page]  ).per(6)
 
 
 
@@ -34,9 +35,10 @@ class DetailsController < ApplicationController
 uri = URI.parse(final_url)
 @response = Net::HTTP.get_response(uri)
 @obj = JSON.parse(@response.body)
+if  @obj.blank?
 @w = @obj['SZ_Credit']['JSXX']['企业工伤事故发生信息']
 @first_data = Kaminari.paginate_array(@w).page(params[:page]).per(6)
-
+end
 
 
 
@@ -128,6 +130,9 @@ uri = URI.parse(final_url)
     respond_to  do | format |
     if params[:type]=="bid"
            format.js{render :file => '/details/idex.js.erb'}
+         end
+             if params[:type]=="invested"
+           format.js{render :file => '/details/invested.js.erb'}
          end
     if params[:type] == "bussiness_change"
         format.js {render :file => '/details/bussiness_change.js.erb'}

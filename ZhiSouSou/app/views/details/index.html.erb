@@ -46,7 +46,7 @@
                		<ul class="l_xq_middle_button_mid_ul"    id="navHeight"   >
                			<li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_1" style="background-color: #fff; border-top: 3px solid #F39800; color: #F39800;">风险概述</li>
                			<li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_2">基本信息/投资</li>
-               			<li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_3">信用数据</li>
+               			<% if @obj.blank? %><li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_3">信用数据</li><% end %>
                			<li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_4">经营信息</li>
                			<li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_5">法律诉讼</li>
                			<li class="l_xq_middle_button_mid_ul_li " id="l_xq_middle_button_mid_ul_li_id_6">互联网动态信息</li>
@@ -251,7 +251,7 @@
 	</div>
 
 	<div class="y-jbxx-part">
-	    <h2>工商基本信息</h2>
+	    <h3>工商基本信息</h3>
 		<div class="y-jbxx-part-contant">
 			<table class="y-jbxx-gsxx-contant-table">
 				<tbody>
@@ -304,23 +304,28 @@
 	</div>
 	
 	<div class="y-jbxx-part">
-	    <h2>主要人员</h2>	
+	    <h3>主要人员</h3>	
 		<div class="y-jbxx-part-contant">
 
                                            <%   @key_person.each  do |  one_person  |  %>
  
-			<div class="y-jbxx-part-contant-people">
-				<div><img src=<%= image_path   "key_person.png" %> class="y-jbxx-part-contant-people-img"></div>
-				<div> <%= one_person["name"]%>  </div>
-				<div> <%= one_person["position"]%> </div>
+			<div class="y-jbxx-part-contant-people"  style="width: 23%;float: left;margin-right: 2%; margin-top: 20px;">
+				<div><img src=<%= image_path   "key-person.png" %> class="y-jbxx-part-contant-people-img"></div>
+				<div style="margin-left: 60%;"> <%= one_person["name"]%>  </div><br>
+				<div style="margin-left: 60%;"> <%= one_person["position"]%> </div>
 			</div>
                                           <%  end %>
 
 		</div>
 	</div>
-	<div class="y-jbxx-part">
+
+
+
+
+
+	<div class="y-jbxx-part" style="clear: both;">
 	
-		<h2>股东信息</h2>
+		<h3>股东信息</h3>
 		<div class="y-jbxx-part-contant">
 		    <ul>
 
@@ -340,7 +345,7 @@
 		
 	</div>
 	<div class="y-jbxx-part">
-		<h2>工商变更</h2>
+		<h3>工商变更</h3>
 		<div class="y-jbxx-part-contant">
 		   <table class="y-jbxx-part-contant-tabletwo">
 		   	<thead>
@@ -379,9 +384,9 @@
 		
 	</div>
 	<div class="y-jbxx-part">
-		<h2>对外投资</h2>
+		<h3>对外投资</h3>
 		<div class="y-jbxx-part-contant">
-		    <ul class="y-jbxx-part-contant-lone">
+		    <ul class="y-jbxx-part-contant-lone" id="invested_ul">
                                
                                   <%  @invested.each do | company |  %>
 		    	<li>
@@ -397,12 +402,16 @@
 
 		    
 		    </ul>
+		    <div id="invested" >
+		   <%= paginate @invested,   :params=> {  :type=>   :invested},  :remote=>true %> 
+                                    </div>
 		</div>
+		 
 		
 	</div>
 	<div class="y-jbxx-part">
 	
-		<h2>密切企业／个人</h2>
+		<h3>密切企业／个人</h3>
 		<div class="y-jbxx-part-contant">
 		   <table class="y-jbxx-part-contant-tabletwo">
 		   	<thead>
@@ -423,7 +432,7 @@
 	</div>
 	<div class="y-jbxx-part">
 	
-		<h2>敏感人</h2>
+		<h3>敏感人</h3>
 		<div class="y-jbxx-part-contant">
 		   <table class="y-jbxx-part-contant-tabletwo">
 		   	<thead>
@@ -459,7 +468,7 @@
  -->
 
 
-
+<% if   @obj.blank? %>
 
 
 <div class="y-xysj qyxq_menu_display_3" style="margin-top: 100px;">
@@ -576,7 +585,7 @@ href="#collapseOne" class="y-xysj-contant-left-part-title">
 </div>
 
 
-
+<% end %>
 
 
 
