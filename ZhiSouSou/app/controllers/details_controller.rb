@@ -63,10 +63,17 @@ class DetailsController < ApplicationController
       # @change_size_holders=@infomations["baseInfo"]['invested_size']
       # @invested = Kaminari.paginate_array(@invested,total_count:@change_size_holders ).page(params[:page]  ).per(6)
 
-      ##经营异常
-      # @AbnormalOperation=  @base_infomations["baseInfo"]["another"]["AbnormalOperation"]
-      # @change_size_AbnormalOperation=@infomations["baseInfo"]['AbnormalOperation_size']
-      # @AbnormalOperation= Kaminari.paginate_array(@AbnormalOperation ,total_count:@change_size_AbnormalOperation      ).page(params[:page]  ).per(6)
+      #经营异常
+
+      @AbnormalOperation=  @infomations["baseInfo"]["AbnormalOperation"]
+      @change_size_AbnormalOperation=@infomations["baseInfo"]['AbnormalOperation_size']
+      @AbnormalOperation= Kaminari.paginate_array(@AbnormalOperation ,total_count:@change_size_AbnormalOperation      ).page(params[:page]  ).per(6)
+
+
+
+
+
+
 
       # ###股权出质
       #   @Equity_Pledge_Registration_Information=  @base_infomations["baseInfo"]["Equity_Pledge_Registration_Information"]
@@ -74,11 +81,11 @@ class DetailsController < ApplicationController
       # @Equity_Pledge_Registration_Information= Kaminari.paginate_array(@change_size_Equity_Pledge_Registration_Information      ).page(params[:page]  ).per(6)
 
  ##招聘
-#  @recruitmentInformation=@recruitment["baseInfo"]["recruit"]
-#   @change_size_recruitmentInformation=@infomations["baseInfo"]['recruit']['information_size']
-# @recruitmentInformation = Kaminari.paginate_array(@change_size_recruitmentInformation).page(params[:page]  ).per(5)
+  @recruitmentInformation=@infomations["recruit"]
+  @change_size_recruitmentInformation=@infomations['recruit']['information_size']
+ @recruitmentInformation = Kaminari.paginate_array(@recruitmentInformation, total_count:@change_size_recruitmentInformation).page(params[:page]  ).per(5)
 
-
+p  @infomations["baseInfo"]["recruit"]
 
 
 
@@ -90,21 +97,53 @@ class DetailsController < ApplicationController
     @change = Kaminari.paginate_array(@change, total_count:@change_size ).page(params[:page]).per(3)
 
     #评标结果公示
-    @relation_discribe_size= @infomations["baseInfo"]['relation_discribe']
-    @close_enterprise = @infomations["baseInfo"]["relation_discribe"]
-    #@close_enterprise = Kaminari.paginate_array( @close_enterprise, total_count:@relation_discribe_size).page(params[:page] ).per(3)
+ @bid_evaluate=@infomations["bid"]["bid_evaluate"]
+ @bid_evaluate_size = @infomations["bid"]["bid_evaluate_size"]
+  @bid_evaluate = Kaminari.paginate_array(@bid_evaluate, total_count:@bid_evaluate_size ).page(params[:page]).per(3)
+    # @relation_discribe_size= @infomations["bid"]['relation_discribe']
+    # @close_enterprise = @infomations["bid"]["relation_discribe"]
+    # @close_enterprise = Kaminari.paginate_array( @close_enterprise, total_count:@relation_discribe_size).page(params[:page] ).per(3)
 
      #招标公告
     @change_sizezb= @infomations["bid"]['bid_notice_size']
     @bid_announcement = @infomations["bid"]["bid_notice"]
     @bid_announcement = Kaminari.paginate_array( @bid_announcement, total_count:@change_sizezb).page(params[:page] ).per(3)
 
-      #中标结果公告
+##招标变更
+ @bid_change=@infomations["bid"]["bid_change"]
+  @bid_change_size = @infomations["bid"]["bid_change_size"]
+@bid_change = Kaminari.paginate_array( @bid_change, total_count:@bid_change_size).page(params[:page]  ).per(5)
 
+
+
+
+
+      #中标结果公告
       @bidding_result_size = @infomations["bid"]["bid_result_size"]
       @bidding_result = @infomations["bid"]["bid_result"]
       @bidding_result = Kaminari.paginate_array( @bidding_result, total_count:@bidding_result_size).page(params[:page] ).per(3)
 
+
+##法律诉讼
+   #诉讼公告
+    @related = @infomations["law"]["related_Legal_Source"]
+      @related_Legal_Source_size = @infomations["law"]["related_Legal_Source_size"]
+     @related = Kaminari.paginate_array(@related, total_count:@related_Legal_Source_size).page(params[:page]).per(5)
+
+    #裁判文书
+     @referee = @infomations["law"]["related_Law_Judgement"]
+       @related_Law_Judgement_size = @infomations["law"]["related_Law_Judgement_size"]
+     @referee  = Kaminari.paginate_array(@referee, total_count:@related_Law_Judgement_size).page(params[:page]).per(5)
+
+    #被执行人
+   @debtor = @infomations["law"]["related_Law_Debtor"]
+     @related_Law_Debtor_size = @infomations["law"]["related_Law_Debtor_size"]
+   @debtor  = Kaminari.paginate_array(@debtor, total_count:@related_Law_Debtor_size).page(params[:page]).per(1)
+
+   #失信人
+   @dishonest = @infomations["law"]["related_Law_Dishonest"]
+     @related_Law_Dishonest_size = @infomations["law"]["related_Law_Dishonest_size"]
+   @dishonest  = Kaminari.paginate_array(@dishonest, total_count:@related_Law_Dishonest_size).page(params[:page]).per(1)
     end
 
     # puts "nil" if  @bid_announcement == nil
