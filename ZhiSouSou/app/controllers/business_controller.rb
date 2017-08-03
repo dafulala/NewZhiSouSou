@@ -5,18 +5,6 @@ class BusinessController < ApplicationController
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   respond_to  do | format |
 
     if params[:type] == "business"

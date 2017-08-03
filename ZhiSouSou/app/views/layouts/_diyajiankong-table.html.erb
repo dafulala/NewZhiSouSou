@@ -20,23 +20,29 @@
 		    	<th width="10%">操作</th>
 		    </tr>
 		  </thead>
-		  <tbody>
+		  <tbody id="mortgages_tbody">
+      <% @mortgages.each do |a| %>
 			<tr>
-				<td>国信</td>
-				<td>黄春霞</td>
-				<td>6000411011</td>
-				<td></td>
-			                 <td>6000411011</td>
-			                <td>2016-04-26</td>
-				<td>房产</td>
-			                <td><a href="" title="">抵押</a></td>
+				<td><%= a['customerinformation'] %></td>
+				<td><%= a['Theholde'] %></td>
+				<td><%= a['cardnumber'] %></td>
+				<td><%= a['mortgagee'] %></td>
+			                 <td><%= a['Idnumber'] %></td>
+			                <td><%= a['Mortgagetime'] %></td>
+				<td><%= a['Propertytype'] %></td>
+			                <td><a href="" title=""><%= a['Stateproperty'] %></a></td>
 			                <td><a href="" title="" data-toggle="modal" data-target="#c_myModal_djck">点击查看</a></td>
 			                <td><a href="" title=""  data-toggle="modal" data-target="#c_myModal_chakan">查看</a>/<a href="" title="">修改</a>/<a href="" title="">删除</a></td>
 			</tr>
-			<tr></tr>
+      <% end %>
 			
 		  </tbody>
-		</table>  
+		</table>
+    <div id="mortgages_div">
+
+      <%= paginate @mortgages,   :params=> {  :type=>   :mortgages},  :remote=>true %>
+
+    </div>
 	</div>
 </div>
 </div>

@@ -1,0 +1,18 @@
+$("#Equity_Pledge_Registration_Information_tbody").empty();
+
+<% @Equity_Pledge_Registration_Information.each do | source | %>
+
+$("#Equity_Pledge_Registration_Information_tbody").append("        <tr >\
+            <td width='8%'><%=coping_information['_id'] %></td>\
+            <td width='15%'><%=coping_information['Equity_Pledge_Date'] %></td>\
+            <td width='25%'><%=coping_information['Equity_Pledge_Registration_Id'] %></td>\
+            <td width='15%'><%=coping_information['Equity_Pledge_Registration_Person'] %></td>\
+            <td width='15%'><%=coping_information['Pledgee_Person'] %></td>\
+            <td width='12%'><%=coping_information['Equity_Pledge_Status'] %></td>\
+          <td><a href=' data-toggle='modal' data-target='#c_myModal_jy'>详情</a></td>\
+          </tr>")
+
+<% end %>
+
+
+$("#Equity_Pledge_Registration_Information_div").html('<%=  escape_javascript(paginate @Equity_Pledge_Registration_Information,  :type=> "Equity_Pledge_Registration_Information", :remote=>true) %>')

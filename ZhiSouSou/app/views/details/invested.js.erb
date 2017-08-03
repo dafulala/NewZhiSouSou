@@ -1,0 +1,20 @@
+$("#invested_ul").empty()
+
+<% @invested.each do |one|  %>
+
+
+$("#invested_ul").append("     <li>\
+		    		<div class='y-jbxx-part-contant-lone-div'>\
+		    			<h4><%= one['name'] %></h4>\
+		    			<span>法定代表人：-</span>\
+		    			<span>成立日期：-</span>\
+		    			<span>注册资本：-</span>\
+		    			<span>企业地址：-</span>\
+		    		</div>\
+		    	</li>        \               ")
+
+
+
+<% end %>
+
+  $("#invested").html('<%= escape_javascript(paginate @invested,:type=>"invested",:remote=>true)%>');	

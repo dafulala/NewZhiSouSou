@@ -1,0 +1,164 @@
+$("#socials_tbody").empty()
+
+<%  @socials.each do |a|  %>
+
+
+$("#socials_tbody").append("  			<tr>\
+    <td width='15%'>\
+    <div class='y-form-first'>\
+    <i class='fa fa-exclamation-circle warn'></i>\
+    <a href=<%=  details_index_path  %>><%= a['Companynames']%></a>\
+<i type='button' class='fa fa-close font-table' data-toggle='modal' data-target='#close-she'></i>\
+    </div>\
+</td>\
+ <td width='10%'><%= a['socialsecuritynumber']%></td>\
+    <td width='10%'><%= a['startingdate']%></td>\
+    <td width='10%'><%= a['insurancetype']%></td>\
+    <td width='8%'><%= a['numberofinsured']%></td>\
+    <td width='8%'><%= a['monthschange']%></td>\
+    <td width='8%'><%= a['percentagechange']%></td>\
+<td><a data-toggle='modal' data-target='#chart'>点击查看<a>\
+    <div class='modal fade' id='chart' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>\
+    <div class='modal-dialog insured'>\
+    <div class='modal-content'>\
+    <div class='modal-header'>\
+    <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>\
+    &times;\
+</button>\
+<h4 class='modal-title' id='myModalLabel'>\
+  参保图标信息\
+</h4>\
+</div>\
+<div class='modal-body' >\
+  <div style='width: 800px;height: 400px;' id='main'>\
+    <script type='text/javascript'>\
+      var myChart = echarts.init(document.getElementById('main'));\
+      var option = {\
+        title: {\
+        text: ''\
+    },\
+        tooltip: {\
+        trigger: 'axis'\
+    },\
+        legend: {\
+        data:['医疗参保','养老参保','失业参保','工商参保']\
+    },\
+        grid: {\
+        left: '3%',\
+        right: '4%',\
+        bottom: '3%',\
+        containLabel: true\
+    },\
+        toolbox: {\
+        feature: {\
+        saveAsImage: {}\
+    }\
+    },\
+        xAxis: {\
+        type: 'category',\
+        boundaryGap: false,\
+        data: ['2016年11月','2016年12月','2017年1月','2017年2月','2017年3月','2017年4月','2017年5月','2017年6月','2017年7月']\
+    },\
+        yAxis: {\
+        type: 'value'\
+    },\
+        series: [\
+    {\
+        name:'邮件营销',\
+        type:'line',\
+        stack: '总量',\
+        data:[120, 132, 101, 134, 90, 230, 210]\
+    },\
+    {\
+        name:'联盟广告',\
+        type:'line',\
+        stack: '总量',\
+        data:[220, 182, 191, 234, 290, 330, 310]\
+    },\
+    {\
+        name:'视频广告',\
+        type:'line',\
+        stack: '总量',\
+        data:[150, 232, 201, 154, 190, 330, 410]\
+    },\
+    {\
+        name:'直接访问',\
+        type:'line',\
+        stack: '总量',\
+        data:[320, 332, 301, 334, 390, 330, 320]\
+    },\
+    {\
+        name:'搜索引擎',\
+        type:'line',\
+        stack: '总量',\
+        data:[]\
+    }\
+        ]\
+    };\
+      myChart.setOption(option);\
+    </script>\
+    </div>\
+    <div >\
+    <table class='insured-table'>\
+    <tbody>\
+    <tr>\
+    <td width='12%'>参保类型</td>\
+    <td width='12%'>2017年4月</td>\
+    <td width='12%'>2017年5月</td>\
+    <td width='12%'>2017年6月</td>\
+    <td width='12%'>2017年7月</td>\
+    <td width='20%'>近两个月人数变化</td>\
+    <td width='20%'>人数变化百分比</td>\
+    </tr>\
+    <tr>\
+    <td>养老参保</td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    </tr>\
+    <tr>\
+    <td>工商参保</td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    </tr>\
+    <tr>\
+    <td>失业参保</td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    </tr>\
+    <tr>\
+    <td>医疗参保</td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    <td></td>\
+    </tr>\
+    </tbody>\
+    </table>\
+    </div>\
+    </div>\
+    </div><!-- /.modal-content -->\
+    </div><!-- /.modal -->\
+    </div>\
+    </td>\
+    </tr>       ")
+
+
+
+<% end %>
+
+
+    $("#socials_div").html(    '<%=       escape_javascript  (paginate @socials,  :type => "socials",:remote=>true)    %>'       )

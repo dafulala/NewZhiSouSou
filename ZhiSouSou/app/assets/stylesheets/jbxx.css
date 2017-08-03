@@ -16,11 +16,11 @@
 .y-jbxx-part-contant-people div{vertical-align:middle;float:left;}
 .y-jbxx-part-contant-people span{display: block;text-align:right;}
 .y-jbxx-part-contant-people-img{display:block;}
-.y-jbxx-part-contant-people h4{margin-bottom:10px;}
-.y-jbxx-part-contant-people h4 strong{font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;display: block;float:left;width:70%;}
-.y-jbxx-part-contant-people h4 span{font-size:14px;color:#888;}
-.y-jbxx-part-contant-people p{margin:0;}
-.y-jbxx-part-contant-people p strong{width:30%;color:#999;float:left;}
+.y-jbxx-part-contant-people h5{margin-bottom:0px;}
+.y-jbxx-part-contant-people_p{font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;display: block;float:left;width:70%;}
+.y-jbxx-part-contant-people h5 span{font-size:14px;color:#888; display:inline-block; float: right;}
+.y-jbxx-part-contant-people p{margin:0; font-size: 12px;}
+.y-jbxx-part-contant-people p i{width:70%;color:#A2A2A2;float:left; font-weight: ;}
 .y-jbxx-part-contant-people p span{color: #999;}
 
 

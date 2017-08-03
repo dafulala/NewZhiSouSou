@@ -1,6 +1,15 @@
+alert("aaaaaaaa")
+
+<%  @change_sizezb=@infomations['bid_notice_size']  %>
+
+<%  puts @infomations  %>
+
+<%   @bid_announcement=  @infomations["bid_notice"]  %>
+
+<% @bid_announcement = Kaminari.paginate_array(@bid_announcement,total_count:@change_sizezb ).page(params[:page]).per(3)  %>
+
+
 $("#bid_announcement").empty()
-
-
 
 
 
@@ -8,10 +17,4 @@ $("#bid_announcement").empty()
    $("#bid_announcement").append("<tr ><td>1</td><td><%=coping_information['title'] %></td><td><%=coping_information['data'] %></td><td><%=coping_information['address'] %></td></tr>")
    <% end %>
 
-
-
-
-
-
-
- $("#bid_announcementtwo").html(    '<%=       escape_javascript  (paginate @bid_announcement,  :type => "bid_announcement",:remote=>true)    %>'       )
+ $("#bid_announcementtwo").html(    '<%=       escape_javascript  (paginate @bid_announcement,  :type => "bid_announcement", :companyType=>'经营信息',:fieldName=>'招标公告',:remote=>true)    %>' )

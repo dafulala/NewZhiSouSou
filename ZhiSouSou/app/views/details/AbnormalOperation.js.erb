@@ -1,0 +1,17 @@
+$("#AbnormalOperation_tbody").empty();
+
+<% @AbnormalOperation.each do | coping_information | %>
+
+$("#AbnormalOperation_tbody").append(" <tr >\
+            <td width='8%'><%=coping_information['_id'] %></td>\
+            <td width='10%'><%=coping_information['reasons_for_into_year'] %></td>\
+            <td width='12%'><%=coping_information['reasons_judges'] %></td>\
+            <td width='30%'><%=coping_information['reasons_for_into'] %></td>\
+            <td width='10%'><%=coping_information['position'] %></td>\
+            <td width='30%'><%=coping_information['reasons_for_free'] %></td>\
+          </tr>")
+
+<% end %>
+
+
+$("#AbnormalOperation_div").html('<%=  escape_javascript(paginate @AbnormalOperation,  :type=> "AbnormalOperation", :remote=>true) %>')

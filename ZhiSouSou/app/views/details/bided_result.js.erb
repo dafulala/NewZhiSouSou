@@ -1,12 +1,15 @@
-$("#bided_result_tbody").empty()
+<% @bidding_result_size = @infomations["bid_result_size"]%>
+<% @bidding_result = @infomations["bid_result"]%>
+<% @bidding_result = Kaminari.paginate_array( @bidding_result, total_count:@bidding_result_size).page(params[:page] ).per(3) %>
+$("#aaa").empty()
 
-  <%  @bid_result.each do |one_result|  %>
-$("#bided_result_tbody").append("    <tr class='c_tb_tr'>  <td>1</td>  <td class='c_text_left'><%=  one_result['title'] %></td>   <td><%=  one_result['date'] %></td>    <td><%= one_result['address'] %></td>    <td> </td> </tr>                    ")
+  <%  @bidding_result.each do |bidding|  %>
+$("#aaa").append("    <tr class='c_tb_tr'>  <td>1</td>  <td class='c_text_left'><%=  bidding['title'] %></td>   <td><%=  bidding['date'] %></td>    <td><%= bidding['address'] %></td>    <td> </td> </tr>                    ")
 
 <% end %>
 
 
-        $("#bided_result_div").html(    '<%=       escape_javascript  (paginate @bid_result,  :type => "bidedResult",:remote=>true)    %>'       )
+        $("#bbb").html(    '<%=       escape_javascript  (paginate @bidding_result, :params=>{ :type=> :bidding_result, :companyType=>'招标',:fieldName=>'中标结果公告'  },remote:true)    %>'       )
 
 
 

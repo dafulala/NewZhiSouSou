@@ -1,4 +1,8 @@
 
+<%  @change_size=@infomations['change_size']  %>
+ <%   @change=  @infomations["change"]  %>
+
+<% @change = Kaminari.paginate_array(@change, total_count:@change_size ).page(params[:page]).per(3)  %>
 
 
 $("#change_li").empty()
@@ -6,9 +10,8 @@ $("#change_li").empty()
 <%      @change .each do |one|  %>
 
 
-$("#change_li").append("       <tr><td  style='width:100px'> <%=  one['ChangeDate'] %> </td><td >    <%=  one['ChangeMatters'] %>  </td>  <td>  <%=  one['before'] %>  </td>   <td>  <%=  one['after'] %>  </td>  </tr>                         ")
+$("#change_li").append(" <tr><td  style='width:100px'> <%=  one['ChangeDate'] %> </td><td >    <%=  one['ChangeMatters'] %>  </td>  <td>  <%=  one['before'] %>  </td>   <td>  <%=  one['after'] %>  </td>  </tr>                         ")
 <% end %>
 
 
-$("#business_change_paginate").html(   '    <%=     escape_javascript(  paginate  @change,  :type => "bid",  :remote=>true   )      %>     '  );
-
+$("#business_change_paginate").html(   '    <%=     escape_javascript(  paginate  @change,  :type => "bussiness_change",  :companyType=>'基本信息',:fieldName=>'工商变更' ,  :remote=>true   )      %>     '  );

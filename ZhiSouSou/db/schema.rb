@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731121611) do
+ActiveRecord::Schema.define(version: 20170802022619) do
 
   create_table "busines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "information"
@@ -30,13 +30,31 @@ ActiveRecord::Schema.define(version: 20170731121611) do
   end
 
   create_table "mortgages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "customerinformation"
+    t.string   "Theholde"
+    t.integer  "cardnumber"
+    t.string   "mortgagee"
+    t.integer  "Idnumber"
+    t.date     "Mortgagetime"
+    t.string   "Propertytype"
+    t.string   "Stateproperty"
+    t.string   "Thetransferprice"
+    t.string   "operation"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "socials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "Companynames"
+    t.integer  "socialsecuritynumber"
+    t.date     "startingdate"
+    t.string   "insurancetype"
+    t.integer  "numberofinsured"
+    t.integer  "monthschange"
+    t.integer  "percentagechange"
+    t.integer  "iconstatistics"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

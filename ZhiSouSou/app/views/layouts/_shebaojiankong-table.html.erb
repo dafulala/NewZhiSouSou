@@ -7,6 +7,7 @@
 	<div class="y-contant_one">
 		<table class="y-form" cellspacing="0px;" style="box-shadow: 0 0 3px #ccc;">
 		  <thead>
+  
 		    <tr class="y-form-head">
 		    	<th width="15%">公司名称</th>
 		    	<th width="10%">社保单位编号</th>
@@ -17,24 +18,32 @@
 		    	<th width="8%">人数变化百分比</th>
 		    	<th width="8%">参保图标统计</th>
 		    </tr>
+      
 		  </thead>
-		  <tbody>
+		  <tbody id="socials_tbody">
+		      <%  @socials.each do |a|  %>
 			<tr>
-				<td>
+				<td width="15%">
 				    <div class="y-form-first">
 					    <i class="fa fa-exclamation-circle warn"></i>
-						<a href=<%=  details_index_path  %>>深圳市旭丰达纸业有限公司</a>
+						<a href=<%=  details_index_path  %>><%= a['Companynames']%></a>
 						<i type="button" class="fa fa-close font-table" data-toggle="modal" data-target="#close-she"></i>
 					</div>
 					
 					
 				</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			    <td></td>
-			    <td></td>
-				<td></td>
+
+
+        <td width="10%"><%= a['socialsecuritynumber']%></td>
+        <td width="10%"><%= a['startingdate']%></td>
+        <td width="10%"><%= a['insurancetype']%></td>
+        <td width="8%"><%= a['numberofinsured']%></td>
+        <td width="8%"><%= a['monthschange']%></td>
+        <td width="8%"><%= a['percentagechange']%></td>
+
+
+
+
 			    <td><a data-toggle="modal" data-target="#chart">点击查看<a>
                      <div class="modal fade" id="chart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog insured">
@@ -173,24 +182,16 @@
 					</div>
 			    </td>
 			</tr>
-			<tr>
-				<td><div>
-					    <i class="fa fa-exclamation-circle warn"></i>
-						<a href="">深圳市旭丰达纸业有限公司</a>
-						<i type="button" class="fa fa-close font-table" data-toggle="modal" data-target="#close-she"></i>
-					</div>
-					
-			</tr>
-			<tr>
-				<td><div>
-					    <i class="fa fa-exclamation-circle warn"></i>
-						<a href="">深圳市旭丰达纸业有限公司</a>
-						<i type="button" class="fa fa-close font-table" data-toggle="modal" data-target="#close-she"></i>
-					</div>
-					
-			</tr>
+      <% end %>
+
 		  </tbody>
-		</table> 
+		</table>
+    <div id="socials_div">
+      <%= paginate @socials,   :params=> {  :type=>   :socials},  :remote=>true %>
+    </div>
+
+
+
 
 		 <div class="modal fade" id="close-she" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">

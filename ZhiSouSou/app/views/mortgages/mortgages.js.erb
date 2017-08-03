@@ -1,0 +1,24 @@
+$("#mortgages_tbody").empty()
+
+<%  @mortgages.each do |a|  %>
+
+
+$("#mortgages_tbody").append("    <tr>\
+    <td><%= a['customerinformation'] %></td>\
+    <td><%= a['Theholde'] %></td>\
+    <td><%= a['cardnumber'] %></td>\
+    <td><%= a['mortgagee'] %></td>\
+    <td><%= a['Idnumber'] %></td>\
+    <td><%= a['Mortgagetime'] %></td>\
+    <td><%= a['Propertytype'] %></td>\
+    <td><a href=' title='><%= a['Stateproperty'] %></a></td>\
+    <td><a href=' title=' data-toggle='modal' data-target='#c_myModal_djck'>点击查看</a></td>\
+    <td><a href=' title='  data-toggle='modal' data-target='#c_myModal_chakan'>查看</a>/<a href=' title='>修改</a>/<a href=' title='>删除</a></td>\
+    </tr>          ")
+
+
+
+<% end %>
+
+
+    $("#mortgages_div").html(    '<%=       escape_javascript  (paginate @mortgages,  :type => "mortgages",:remote=>true)    %>'       )

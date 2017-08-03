@@ -1,0 +1,18 @@
+$("#holders_ul").empty();
+
+<% @holders.each do | important_people | %>
+
+$("#holders_ul").append("   <li >\
+            <div class='y-jbxx-part-contant-people' style='width: 23%;float: left;margin-right: 2%; margin-top: 20px;'>\
+              <h5><%=important_people['shareholder']%></strong><span>企业法人</span></h5>\
+              <p > <span style='display: inline-block; float: left;margin-left: -20px;'>认缴资初暂无数据</span><span style='float: right;display: block;margin-left: 130px;'><%= important_people['pay_should_money']%>/<%= important_people[' pay_should_time']%></span></p>\
+\
+              <p > <span style='display: inline-block; float: left;margin-left: -20px;'>实际出缴</span><span style='float: right;display: block;margin-left: 130px;'><%= important_people['pay_actual_money']%>/<%= important_people[' pay_actual_time']%></span></p>\
+              \
+            </div>\
+          </li>  " )
+
+<% end %>
+
+
+$("#holders_div").html('<%=  escape_javascript(paginate @holders,  :type=> "holders", :remote=>true) %>')
