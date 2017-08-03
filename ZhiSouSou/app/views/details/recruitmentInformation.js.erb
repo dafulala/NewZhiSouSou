@@ -1,3 +1,7 @@
+    <%   @recruitmentInformation=@infomations["recruit"]["information"]%>
+          <%  @change_size_recruitmentInformation=@infomations['recruit']['information_size']%>
+          <% @recruitmentInformation = Kaminari.paginate_array(@recruitmentInformation, total_count: @change_size_recruitmentInformation).page(params[:page]  ).per(5)  %>
+
 $("#recruitmentInformation").empty()
 
 <%  @recruitmentInformation.each do |one_result|  %>
@@ -11,4 +15,4 @@ $("#recruitmentInformation").append("    <tr ><td>1</td><td ><%=one_result['posi
 
 
 
-$("#li_recruitmentInformation").html(   '    <%=     escape_javascript(  paginate  @recruitmentInformation,  :type => "recruitmentInformation",  :remote=>true   )      %>     '  );
+$("#li_recruitmentInformation").html(   '    <%=     escape_javascript(  paginate  @recruitmentInformation,  :type => "recruitmentInformation", :companyType=>'招聘',:fieldName=>'',  :remote=>true   )      %>     '  );

@@ -598,23 +598,7 @@
           <th width="30%">移除经营异常名录原因</th>
         </tr>
       </thaed>
-      <tbody   id="AbnormalOperation_tbody">
-      <%   if @AbnormalOperation.blank?  %>
-          <td colspan="7">暂无数据</td>
-      <% else %>
-          <% @AbnormalOperation.each do |coping_information| %>
-              <tr >
-                <td width="8%"><%=coping_information["_id"] %></td>
-                <td width="10%"><%=coping_information["reasons_for_into_year"] %></td>
-                <td width="12%"><%=coping_information["reasons_judges"] %></td>
-                <td width="30%"><%=coping_information["reasons_for_into"] %></td>
-                <td width="10%"><%=coping_information["position"] %></td>
-                <td width="30%"><%=coping_information["reasons_for_free"] %></td>
-              </tr>
-          <% end %>
 
-      <% end %>
-      </tbody>
     </table>
     <div id="AbnormalOperation_div" >
 
@@ -670,6 +654,13 @@
                   <th width="18%">薪资</th>
                 </tr>
               </thaed>
+              <% if  !@recruitmentInformation%>
+              <tbody id="recruitmentInformation">
+               <tr class="c_tb_tr">
+              <td colspan="8">暂无数据</td>
+            </tr>
+                 </tbody>
+             <% else %>
               <tbody id="recruitmentInformation">
               <% @recruitmentInformation.each do |coping_information| %>
                   <tr class="c_tb_tr" >
@@ -681,12 +672,15 @@
                   </tr>
               <% end %>
               </tbody>
+                 <% end %>
             </table>
+               <% if  @infomations["recruit"]%>
             <div id="li_recruitmentInformation" >
 
               <%= paginate @recruitmentInformation,   :params=> {  :type=>   :recruitmentInformation, :companyType=>'招聘',:fieldName=>''},  :remote=>true %>
 
             </div>
+            <% end %>
           </div>
 
 

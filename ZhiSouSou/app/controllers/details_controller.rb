@@ -5,7 +5,7 @@ class DetailsController < ApplicationController
     if  !page
       page=1
     end
-    @page_size=3
+    @page_size=1
     @start = (page.to_i-1)*@page_size
     @end = page.to_i*@page_size
 
@@ -67,8 +67,11 @@ class DetailsController < ApplicationController
 
       @AbnormalOperation=  @infomations["baseInfo"]["AbnormalOperation"]
       @change_size_AbnormalOperation=@infomations["baseInfo"]['AbnormalOperation_size']
-      @AbnormalOperation= Kaminari.paginate_array(@AbnormalOperation ,total_count:@change_size_AbnormalOperation      ).page(params[:page]  ).per(6)
-
+ if    @change_size_AbnormalOperation
+      @AbnormalOperation= Kaminari.paginate_array(@AbnormalOperation ,total_count:@change_size_AbnormalOperation      ).page(params[:page]  ).per(1)
+else
+ p "aaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbb"
+end
 
 
 
@@ -80,12 +83,15 @@ class DetailsController < ApplicationController
       # @change_size_Equity_Pledge_Registration_Information=@infomations["baseInfo"]['Equity_Pledge_Registration_Information_size']
       # @Equity_Pledge_Registration_Information= Kaminari.paginate_array(@change_size_Equity_Pledge_Registration_Information      ).page(params[:page]  ).per(6)
 
- ##招聘
-  @recruitmentInformation=@infomations["recruit"]
-  @change_size_recruitmentInformation=@infomations['recruit']['information_size']
- @recruitmentInformation = Kaminari.paginate_array(@recruitmentInformation, total_count:@change_size_recruitmentInformation).page(params[:page]  ).per(5)
+ #招聘
 
-p  @infomations["baseInfo"]["recruit"]
+
+
+  @recruitmentInformation=@infomations["recruit"]["information"]
+  @change_size_recruitmentInformation=@infomations['recruit']['information_size']
+
+
+ @recruitmentInformation = Kaminari.paginate_array(@recruitmentInformation, total_count: @change_size_recruitmentInformation).page(params[:page]  ).per(5)
 
 
 
@@ -97,6 +103,7 @@ p  @infomations["baseInfo"]["recruit"]
     @change = Kaminari.paginate_array(@change, total_count:@change_size ).page(params[:page]).per(3)
 
     #评标结果公示
+
  @bid_evaluate=@infomations["bid"]["bid_evaluate"]
  @bid_evaluate_size = @infomations["bid"]["bid_evaluate_size"]
   @bid_evaluate = Kaminari.paginate_array(@bid_evaluate, total_count:@bid_evaluate_size ).page(params[:page]).per(3)

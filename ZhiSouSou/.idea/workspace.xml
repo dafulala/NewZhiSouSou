@@ -20,82 +20,6 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ZhiSouSou@Development__ZhiSouSou.coverage" NAME="Development: ZhiSouSou Coverage Results" MODIFIED="1501684885245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ZhiSouSou" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/app/views/details/index.html.erb">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="575">
-                    <caret line="645" column="138" lean-forward="false" selection-start-line="645" selection-start-column="138" selection-end-line="645" selection-end-column="138" />
-                    <folding>
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                      <element signature="e#270#276#0#HTML" expanded="true" />
-                      <element signature="e#276#282#0#HTML" expanded="true" />
-                      <element signature="e#282#288#0#HTML" expanded="true" />
-                      <element signature="e#288#294#0#HTML" expanded="true" />
-                      <element signature="e#736#742#0#HTML" expanded="true" />
-                      <element signature="e#742#748#0#HTML" expanded="true" />
-                      <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                      <element signature="e#900#906#0#HTML" expanded="true" />
-                      <element signature="e#906#912#0#HTML" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#3;n#div#3;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#4;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#5;n#div#2;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#3;n#div#3;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="bid_announcement.js.erb" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/app/views/details/bid_announcement.js.erb">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="456">
-                    <caret line="19" column="102" lean-forward="false" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -103,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/details_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="127">
-              <caret line="184" column="1" lean-forward="true" selection-start-line="184" selection-start-column="1" selection-end-line="184" selection-end-column="1" />
+              <caret line="246" column="32" lean-forward="true" selection-start-line="246" selection-start-column="32" selection-end-line="246" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -123,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/details/bussiness_change.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,8 +118,8 @@
         <option value="$PROJECT_DIR$/app/views/details/bid_announcement.js.erb" />
         <option value="$PROJECT_DIR$/app/views/details/bussiness_change.js.erb" />
         <option value="$PROJECT_DIR$/app/views/details/bided_result.js.erb" />
-        <option value="$PROJECT_DIR$/app/views/details/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/details_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/details/index.html.erb" />
       </list>
     </option>
   </component>
@@ -213,9 +137,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2032" />
-    <option name="y" value="101" />
-    <option name="width" value="1920" />
+    <option name="x" value="16" />
+    <option name="y" value="408" />
+    <option name="width" value="1225" />
     <option name="height" value="928" />
   </component>
   <component name="ProjectView">
@@ -234,6 +158,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -601,7 +526,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -951,11 +875,12 @@
       <workItem from="1501590560001" duration="23004000" />
       <workItem from="1501652597682" duration="23756000" />
       <workItem from="1501678360581" duration="8751000" />
+      <workItem from="1501730769830" duration="308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122697000" />
+    <option name="totallyTimeSpent" value="123005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -967,9 +892,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2032" y="101" width="1920" height="928" extended-state="0" />
+    <frame x="16" y="408" width="1225" height="928" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17340426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17552742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1109,7 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="71" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="9" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="54" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="12" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,7 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,7 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,7 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,7 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1229,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,14 +1162,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/details/bussiness_change.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1265,56 +1181,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/details/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="645" column="138" lean-forward="false" selection-start-line="645" selection-start-column="138" selection-end-line="645" selection-end-column="138" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#270#276#0#HTML" expanded="true" />
-            <element signature="e#276#282#0#HTML" expanded="true" />
-            <element signature="e#282#288#0#HTML" expanded="true" />
-            <element signature="e#288#294#0#HTML" expanded="true" />
-            <element signature="e#736#742#0#HTML" expanded="true" />
-            <element signature="e#742#748#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#900#906#0#HTML" expanded="true" />
-            <element signature="e#906#912#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#3;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#4;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#5;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/details_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
-          <caret line="184" column="1" lean-forward="true" selection-start-line="184" selection-start-column="1" selection-end-line="184" selection-end-column="1" />
+          <caret line="246" column="32" lean-forward="true" selection-start-line="246" selection-start-column="32" selection-end-line="246" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1323,7 +1193,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="19" column="102" lean-forward="false" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/details/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="298" column="10" lean-forward="true" selection-start-line="298" selection-start-column="10" selection-end-line="298" selection-end-column="10" />
+          <folding>
+            <marker date="1501730907264" expanded="true" signature="20096:20752" ph="if ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
