@@ -598,7 +598,28 @@
           <th width="30%">移除经营异常名录原因</th>
         </tr>
       </thaed>
+      <%   if @AbnormalOperation.blank?  %>
+ <tbody   id="AbnormalOperation_tbody">
 
+         <td colspan="7">暂无数据</td>
+             </tbody>
+<% else %>
+ <tbody   id="AbnormalOperation_tbody">
+          <% @AbnormalOperation.each do |coping_information| %>
+          <tr >
+            <td width="8%"><%=coping_information["_id"] %></td>
+            <td width="10%"><%=coping_information["reasons_for_into_year"] %></td>
+            <td width="12%"><%=coping_information["reasons_judges"] %></td>
+            <td width="30%"><%=coping_information["reasons_for_into"] %></td>
+            <td width="10%"><%=coping_information["position"] %></td>
+            <td width="30%"><%=coping_information["reasons_for_free"] %></td>
+          </tr>
+            <% end %>
+
+
+        </tbody>
+
+<% end %>
     </table>
     <div id="AbnormalOperation_div" >
 
@@ -654,7 +675,12 @@
                   <th width="18%">薪资</th>
                 </tr>
               </thaed>
-              <% if  !@recruitmentInformation%>
+              <% if  !@infomations["recruit"]["information"]%>
+
+
+
+
+
               <tbody id="recruitmentInformation">
                <tr class="c_tb_tr">
               <td colspan="8">暂无数据</td>
@@ -722,7 +748,7 @@
 
   <h4>
                 招标公告
-                <span>(1)</span>
+                <span>(0)</span>
               </h4>
               <div class="c_tb_all" >
                 <table class="table table-hover">
@@ -735,6 +761,11 @@
                       <th width="10%">查看</th>
                     </tr>
                   </thaed>
+                    <%   if @bid_announcement.blank?  %>
+                  <tbody   id="AbnormalOperation_tbody">
+                   <td colspan="7">暂无数据</td>
+                    </tbody>
+<% else %>
                   <tbody id="bid_announcement">
                   <% @bid_announcement.each do |coping_information| %>
                       <tr class="c_tb_tr" >
@@ -749,6 +780,7 @@
                       </tr>
                   <% end %>
                   </tbody>
+                  <% end %>
                 </table>
                 <div id="bid_announcementtwo">
                   <%= paginate @bid_announcement, :params=>{ :type=> :bid_announcement, :companyType=>'招标',:fieldName=>'招标公告'  },remote:true %>
@@ -765,7 +797,7 @@
 
   <h4>
                 评标结果公示
-                <span>(1)</span>
+                <span>(0)</span>
                 </h3>
                 <div class="c_tb_all" >
                   <table class="table table-hover">
@@ -778,6 +810,11 @@
                         <th width="10%">查看</th>
                       </tr>
                     </thaed>
+                     <%   if @bid_evaluate.blank?  %>
+                   <tbody   id="AbnormalOperation_tbody">
+                   <td colspan="7">暂无数据</td>
+                    </tbody>
+                    <% else %>
                     <tbody  id="bid_result_tb">
                     <%  @bid_evaluate.each do |one_result|%>
                         <tr class="c_tb_tr">
@@ -789,6 +826,7 @@
                         </tr>
                     <% end %>
                     </tbody>
+                    <% end %>
                   </table>
 
                   <div id="bid_result_div">
@@ -805,8 +843,8 @@
 
                 <h4>
                   招标变更公告
-                  <span>(1)</span>
-                  </h3>
+                  <span>(0)</span>
+                  </h4>
                   <div class="c_tb_all" >
                     <table class="table table-hover">
                       <thaed class="c_tb_th">
@@ -818,6 +856,11 @@
                           <th width="10%">查看</th>
                         </tr>
                       </thaed>
+                           <%   if @bid_change.blank?  %>
+                   <tbody   id="AbnormalOperation_tbody">
+                   <td colspan="7">暂无数据</td>
+                    </tbody>
+                    <% else %>
                       <tbody id="bid_change_tbody">
                       <%  @bid_change.each do |one_result|%>
                           <tr class="c_tb_tr">
@@ -829,6 +872,7 @@
                           </tr>
                       <% end %>
                       </tbody>
+                      <% end %>
                     </table>
 
 
@@ -841,10 +885,10 @@
 
 
 
-                  <h3>
+                  <h4>
                     中标结果公告
-                    <span>(1)</span>
-                  </h3>
+                    <span>(0)</span>
+                  </h4>
                   <div class="c_tb_all" >
                     <table class="table table-hover">
                       <thaed class="c_tb_th">

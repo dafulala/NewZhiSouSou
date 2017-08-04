@@ -89,8 +89,6 @@ end
 
   @recruitmentInformation=@infomations["recruit"]["information"]
   @change_size_recruitmentInformation=@infomations['recruit']['information_size']
-
-
  @recruitmentInformation = Kaminari.paginate_array(@recruitmentInformation, total_count: @change_size_recruitmentInformation).page(params[:page]  ).per(5)
 
 
@@ -104,8 +102,8 @@ end
 
     #评标结果公示
 
- @bid_evaluate=@infomations["bid"]["bid_evaluate"]
- @bid_evaluate_size = @infomations["bid"]["bid_evaluate_size"]
+@bid_evaluate=@infomations["bid"]["bid_evaluate"]
+  @bid_evaluate_size = @infomations["bid"]["bid_evaluate_size"]
   @bid_evaluate = Kaminari.paginate_array(@bid_evaluate, total_count:@bid_evaluate_size ).page(params[:page]).per(3)
     # @relation_discribe_size= @infomations["bid"]['relation_discribe']
     # @close_enterprise = @infomations["bid"]["relation_discribe"]

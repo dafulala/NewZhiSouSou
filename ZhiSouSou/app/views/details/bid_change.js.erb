@@ -1,3 +1,11 @@
+
+
+<%  @bid_change=@infomations["bid_change"]            %>
+<%        @bid_change_size = @infomations["bid_change_size"]    %>
+<%      @bid_change = Kaminari.paginate_array( @bid_change, total_count:@bid_change_size).page(params[:page]  ).per(5)       %>
+
+
+
 $("#bid_change_tbody").empty()
 
 <%  @bid_change.each do |bid_change|  %>
@@ -10,4 +18,4 @@ $("#bid_change_tbody").append("    <tr><td>1</td> <td><%=  bid_change['title'] %
 <% end %>
 
 
-    $("#bid_change_div").html(    '<%=       escape_javascript  (paginate @bid_change,  :type => "bid_change",:remote=>true)    %>'       )
+    $("#bid_change_div").html(    '<%=       escape_javascript  (paginate @bid_change,  :type => "bid_change, :companyType=>'招标',:fieldName=>'招标变更公告',  :remote=>true)    %>'       )
