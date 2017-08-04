@@ -70,7 +70,7 @@ class DetailsController < ApplicationController
  if    @change_size_AbnormalOperation
       @AbnormalOperation= Kaminari.paginate_array(@AbnormalOperation ,total_count:@change_size_AbnormalOperation      ).page(params[:page]  ).per(1)
 else
- p "aaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbb"
+
 end
 
 
@@ -99,6 +99,8 @@ end
     @change_size=@infomations["baseInfo"]['change_size']
     @change=  @infomations["baseInfo"]["change"]
     @change = Kaminari.paginate_array(@change, total_count:@change_size ).page(params[:page]).per(3)
+
+    #hu
 
     #评标结果公示
 
